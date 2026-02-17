@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tandarts Den Haag — Moderne tandheelkunde voor het hele gezin</title>
-    <meta name="description" content="Kindvriendelijke tandarts in Den Haag. Gewoon Gaaf methode voor kinderen vanaf 1,5 jaar. Gebitscontrole, esthetische tandheelkunde en meer.">
+    <title>Tandarts Den Haag — Een beter leven begint met een mooie glimlach</title>
+    <meta name="description" content="Tandarts Den Haag op het Valkenbosplein. Uw tandarts voor gebitscontrole, preventie, esthetische tandheelkunde en kindvriendelijke behandelingen.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
@@ -13,11 +13,11 @@
            CSS CUSTOM PROPERTIES
            ============================================ */
         :root {
-            --color-primary: #1a6b5a;
-            --color-primary-light: #e8f5f1;
-            --color-primary-dark: #0f4a3e;
-            --color-accent: #c9a96e;
-            --color-accent-light: #f5edde;
+            --color-primary: #2a7a6b;
+            --color-primary-light: #e6f5f0;
+            --color-primary-dark: #1a5c50;
+            --color-accent: #d4a853;
+            --color-accent-light: #faf3e0;
             --color-bg: #fafaf8;
             --color-bg-alt: #f2f0ec;
             --color-surface: #ffffff;
@@ -25,10 +25,6 @@
             --color-text-secondary: #5a5a5a;
             --color-text-light: #8a8a8a;
             --color-border: #e8e6e1;
-            --color-kids: #4ade80;
-            --color-kids-light: #ecfdf5;
-            --color-emergency: #dc2626;
-            --color-emergency-light: #fef2f2;
             --font-heading: 'Playfair Display', Georgia, serif;
             --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
             --radius-sm: 8px;
@@ -77,18 +73,8 @@
             position: relative;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: color var(--transition-fast);
-        }
-
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: color var(--transition-fast); }
         ul { list-style: none; }
 
         /* ============================================
@@ -170,12 +156,12 @@
         .btn-primary {
             background: var(--color-primary);
             color: #fff;
-            box-shadow: 0 4px 20px rgba(26, 107, 90, 0.3);
+            box-shadow: 0 4px 20px rgba(42, 122, 107, 0.3);
         }
 
         .btn-primary:hover {
             background: var(--color-primary-dark);
-            box-shadow: 0 6px 30px rgba(26, 107, 90, 0.4);
+            box-shadow: 0 6px 30px rgba(42, 122, 107, 0.4);
             transform: translateY(-2px);
         }
 
@@ -202,39 +188,13 @@
             transform: translateY(-2px);
         }
 
-        .btn-kids {
-            background: var(--color-kids);
-            color: #fff;
-            box-shadow: 0 4px 20px rgba(74, 222, 128, 0.3);
-        }
-
-        .btn-kids:hover {
-            background: #22c55e;
-            box-shadow: 0 6px 30px rgba(74, 222, 128, 0.4);
-            transform: translateY(-2px);
-        }
-
-        .btn-emergency {
-            background: var(--color-emergency);
-            color: #fff;
-            box-shadow: 0 4px 20px rgba(220, 38, 38, 0.3);
-        }
-
-        .btn-emergency:hover {
-            background: #b91c1c;
-            box-shadow: 0 6px 30px rgba(220, 38, 38, 0.4);
-            transform: translateY(-2px);
-        }
-
         .btn svg {
             width: 16px;
             height: 16px;
             transition: transform var(--transition-base);
         }
 
-        .btn:hover svg {
-            transform: translateX(3px);
-        }
+        .btn:hover svg { transform: translateX(3px); }
 
         /* ============================================
            NAVIGATION
@@ -282,7 +242,7 @@
             align-items: center;
             justify-content: center;
             color: #fff;
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         .nav-links {
@@ -310,13 +270,8 @@
             transition: width var(--transition-base);
         }
 
-        .nav-links a:hover {
-            color: var(--color-primary);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
+        .nav-links a:hover { color: var(--color-primary); }
+        .nav-links a:hover::after { width: 100%; }
 
         .nav-cta {
             padding: 10px 24px !important;
@@ -324,13 +279,8 @@
             color: #fff !important;
         }
 
-        .nav-cta:hover {
-            color: #fff !important;
-        }
-
-        .nav-cta::after {
-            display: none !important;
-        }
+        .nav-cta:hover { color: #fff !important; }
+        .nav-cta::after { display: none !important; }
 
         .nav-mobile-toggle {
             display: none;
@@ -356,17 +306,9 @@
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .nav-mobile-toggle span:nth-child(1) {
-            top: 14px;
-        }
-
-        .nav-mobile-toggle span:nth-child(2) {
-            top: 21px;
-        }
-
-        .nav-mobile-toggle span:nth-child(3) {
-            top: 28px;
-        }
+        .nav-mobile-toggle span:nth-child(1) { top: 14px; }
+        .nav-mobile-toggle span:nth-child(2) { top: 21px; }
+        .nav-mobile-toggle span:nth-child(3) { top: 28px; }
 
         .nav-mobile-toggle.active span:nth-child(1) {
             top: 21px;
@@ -381,6 +323,25 @@
         .nav-mobile-toggle.active span:nth-child(3) {
             top: 21px;
             transform: translateX(-50%) rotate(-45deg);
+        }
+
+        /* Fullscreen mobile menu */
+        .mobile-menu-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            z-index: 1002;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--color-text);
+            padding: 8px;
+            transition: transform var(--transition-fast), opacity var(--transition-fast);
+        }
+
+        .mobile-menu-close:hover {
+            transform: rotate(90deg);
+            opacity: 0.6;
         }
 
         .mobile-menu {
@@ -441,13 +402,8 @@
             transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .mobile-menu-link:hover {
-            color: var(--color-primary);
-        }
-
-        .mobile-menu-link:hover::after {
-            width: 100%;
-        }
+        .mobile-menu-link:hover { color: var(--color-primary); }
+        .mobile-menu-link:hover::after { width: 100%; }
 
         .mobile-menu-bottom {
             display: flex;
@@ -477,9 +433,7 @@
             transition: color var(--transition-fast);
         }
 
-        .mobile-menu-contact a:hover {
-            color: var(--color-primary);
-        }
+        .mobile-menu-contact a:hover { color: var(--color-primary); }
 
         /* ============================================
            HERO SECTION
@@ -518,7 +472,7 @@
         .hero-shape-2 {
             width: 400px;
             height: 400px;
-            background: var(--color-kids);
+            background: var(--color-accent);
             bottom: -100px;
             left: -100px;
             animation: float-2 25s ease-in-out infinite;
@@ -527,7 +481,7 @@
         .hero-shape-3 {
             width: 200px;
             height: 200px;
-            background: var(--color-accent);
+            background: var(--color-primary);
             top: 40%;
             right: 30%;
             animation: float-3 15s ease-in-out infinite;
@@ -557,10 +511,7 @@
             padding: 120px 0 80px;
         }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
+        .hero-content { position: relative; z-index: 2; }
 
         .hero-badge {
             display: inline-flex;
@@ -590,15 +541,8 @@
             50% { opacity: 0.5; transform: scale(1.3); }
         }
 
-        .hero h1 {
-            margin-bottom: 24px;
-            color: var(--color-text);
-        }
-
-        .hero h1 em {
-            font-style: italic;
-            color: var(--color-primary);
-        }
+        .hero h1 { margin-bottom: 24px; color: var(--color-text); }
+        .hero h1 em { font-style: italic; color: var(--color-primary); }
 
         .hero-text {
             font-size: clamp(1.05rem, 1.5vw, 1.15rem);
@@ -637,63 +581,45 @@
             margin-top: 6px;
         }
 
-        .hero-visual {
-            position: relative;
-            z-index: 2;
-        }
+        .hero-visual { position: relative; z-index: 2; }
 
-        .hero-pattern {
-            background: linear-gradient(45deg, var(--color-primary-light) 0%, var(--color-accent-light) 100%);
+        .hero-image-wrapper {
+            position: relative;
             border-radius: var(--radius-xl);
-            padding: 60px;
-            box-shadow: var(--shadow-xl);
-            position: relative;
             overflow: hidden;
-        }
-
-        .hero-pattern::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: 
-                radial-gradient(circle at 20px 20px, var(--color-primary) 2px, transparent 0),
-                radial-gradient(circle at 80px 80px, var(--color-kids) 1px, transparent 0);
-            background-size: 100px 100px;
-            opacity: 0.1;
-        }
-
-        .hero-pattern-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            color: var(--color-text);
-        }
-
-        .hero-pattern-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--color-surface);
-            border-radius: 20px;
-            margin: 0 auto 24px;
+            box-shadow: var(--shadow-xl);
+            background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-accent-light) 100%);
+            height: 520px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
-            box-shadow: var(--shadow-md);
         }
 
-        .hero-pattern h3 {
-            font-size: 1.8rem;
-            margin-bottom: 12px;
-            color: var(--color-text);
+        .hero-image-placeholder {
+            text-align: center;
+            padding: 60px;
         }
 
-        .hero-pattern p {
+        .hero-image-placeholder .hero-icon-large {
+            font-size: 120px;
+            line-height: 1;
+            margin-bottom: 24px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+        }
+
+        .hero-image-placeholder p {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            color: var(--color-primary-dark);
+            font-weight: 600;
+        }
+
+        .hero-image-placeholder .hero-sub {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
             color: var(--color-text-secondary);
-            font-size: 1rem;
-            line-height: 1.6;
-            max-width: 280px;
-            margin: 0 auto;
+            margin-top: 8px;
+            font-weight: 400;
         }
 
         .hero-floating-card {
@@ -713,12 +639,12 @@
         .hero-floating-icon {
             width: 48px;
             height: 48px;
-            background: var(--color-kids-light);
+            background: var(--color-primary-light);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--color-kids);
+            color: var(--color-primary);
             font-size: 1.3rem;
         }
 
@@ -733,21 +659,44 @@
             color: var(--color-text-light);
         }
 
+        /* Second floating card - top right */
+        .hero-floating-card-2 {
+            position: absolute;
+            top: 24px;
+            right: -16px;
+            background: var(--color-surface);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 3;
+        }
+
+        .hero-floating-card-2 .stars {
+            color: var(--color-accent);
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .hero-floating-card-2 span {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--color-text);
+        }
+
         /* ============================================
            ABOUT SECTION
            ============================================ */
-        .about {
-            background: var(--color-surface);
-        }
+        .about { background: var(--color-surface); }
 
         .about-header {
             max-width: 640px;
             margin-bottom: 80px;
         }
 
-        .about-header h2 {
-            margin-bottom: 20px;
-        }
+        .about-header h2 { margin-bottom: 20px; }
 
         .about-grid {
             display: grid;
@@ -760,40 +709,29 @@
             border-radius: var(--radius-xl);
             overflow: hidden;
             position: relative;
-            background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-accent-light) 100%);
-            padding: 40px;
+            background: linear-gradient(135deg, var(--color-primary-light), var(--color-accent-light));
+            height: 500px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .about-visual-icon {
-            width: 120px;
-            height: 120px;
-            background: var(--color-surface);
-            border-radius: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3.5rem;
-            box-shadow: var(--shadow-lg);
-            margin-bottom: 24px;
-        }
-
-        .about-visual-text {
+        .about-image-placeholder {
             text-align: center;
-            max-width: 280px;
+            padding: 40px;
         }
 
-        .about-visual-text h3 {
-            font-size: 1.5rem;
-            margin-bottom: 12px;
-            color: var(--color-text);
+        .about-image-placeholder .icon-xl {
+            font-size: 100px;
+            line-height: 1;
+            margin-bottom: 16px;
         }
 
-        .about-visual-text p {
-            color: var(--color-text-secondary);
-            line-height: 1.6;
+        .about-image-placeholder p {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--color-primary-dark);
+            font-weight: 500;
         }
 
         .about-content {
@@ -848,6 +786,97 @@
         }
 
         /* ============================================
+           KIDS SECTION
+           ============================================ */
+        .kids {
+            background: var(--color-accent-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kids-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .kids-content h2 {
+            margin-bottom: 20px;
+        }
+
+        .kids-content p {
+            color: var(--color-text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.85;
+            margin-bottom: 16px;
+        }
+
+        .kids-features {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .kids-feature {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 20px;
+            background: var(--color-surface);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-base);
+        }
+
+        .kids-feature:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateX(8px);
+        }
+
+        .kids-feature-icon {
+            font-size: 1.6rem;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .kids-feature-text {
+            font-size: 0.92rem;
+            font-weight: 500;
+            color: var(--color-text);
+        }
+
+        .kids-visual {
+            position: relative;
+            background: linear-gradient(135deg, #fff3cd, #fef3c7);
+            border-radius: var(--radius-xl);
+            height: 480px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .kids-visual-content {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .kids-visual-content .icon-xxl {
+            font-size: 140px;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .kids-visual-content p {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--color-text);
+            font-weight: 500;
+        }
+
+        /* ============================================
            SERVICES SECTION
            ============================================ */
         .services {
@@ -867,13 +896,11 @@
             max-width: 560px;
         }
 
-        .services-header-left h2 {
-            margin-bottom: 16px;
-        }
+        .services-header-left h2 { margin-bottom: 16px; }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
         }
 
@@ -905,9 +932,7 @@
             transform: translateY(-4px);
         }
 
-        .service-card:hover::before {
-            opacity: 1;
-        }
+        .service-card:hover::before { opacity: 1; }
 
         .service-icon {
             width: 56px;
@@ -927,184 +952,12 @@
             color: #fff;
         }
 
-        .service-card h3 {
-            margin-bottom: 12px;
-        }
+        .service-card h3 { margin-bottom: 12px; }
 
         .service-card p {
             font-size: 0.92rem;
             color: var(--color-text-secondary);
             line-height: 1.7;
-            margin-bottom: 20px;
-        }
-
-        .service-link {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--color-primary);
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .service-link svg {
-            width: 14px;
-            height: 14px;
-            transition: transform var(--transition-base);
-        }
-
-        .service-card:hover .service-link svg {
-            transform: translateX(4px);
-        }
-
-        /* ============================================
-           KIDS SECTION
-           ============================================ */
-        .kids {
-            background: linear-gradient(135deg, var(--color-kids-light) 0%, #f0fdf4 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .kids-bg-pattern {
-            position: absolute;
-            inset: 0;
-            opacity: 0.05;
-            background-image: 
-                radial-gradient(circle at 30px 30px, var(--color-kids) 2px, transparent 0),
-                radial-gradient(circle at 90px 90px, var(--color-accent) 1px, transparent 0);
-            background-size: 120px 120px;
-        }
-
-        .kids .container {
-            position: relative;
-            z-index: 2;
-        }
-
-        .kids-header {
-            text-align: center;
-            max-width: 640px;
-            margin: 0 auto 80px;
-        }
-
-        .kids-header .section-label {
-            color: var(--color-kids);
-            justify-content: center;
-        }
-
-        .kids-header .section-label::before {
-            background: var(--color-kids);
-        }
-
-        .kids-header h2 {
-            color: var(--color-text);
-            margin-bottom: 16px;
-        }
-
-        .kids-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .kids-visual {
-            background: var(--color-surface);
-            border-radius: var(--radius-xl);
-            padding: 60px;
-            text-align: center;
-            box-shadow: var(--shadow-lg);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .kids-visual::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, var(--color-kids-light) 0%, transparent 70%);
-            opacity: 0.3;
-            animation: rotate-slow 20s linear infinite;
-        }
-
-        @keyframes rotate-slow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .kids-visual-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .kids-visual-emoji {
-            font-size: 4rem;
-            margin-bottom: 24px;
-            display: block;
-        }
-
-        .kids-visual h3 {
-            font-size: 2rem;
-            margin-bottom: 16px;
-            color: var(--color-text);
-        }
-
-        .kids-visual p {
-            color: var(--color-text-secondary);
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        .kids-content {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-        }
-
-        .kids-content h3 {
-            font-size: 2.2rem;
-            margin-bottom: 16px;
-            color: var(--color-text);
-        }
-
-        .kids-content p {
-            color: var(--color-text-secondary);
-            font-size: 1.05rem;
-            line-height: 1.85;
-        }
-
-        .kids-features {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .kids-feature {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .kids-feature-icon {
-            width: 44px;
-            height: 44px;
-            min-width: 44px;
-            background: var(--color-kids-light);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-kids);
-            font-size: 1.2rem;
-        }
-
-        .kids-feature-text {
-            font-size: 1rem;
-            font-weight: 500;
-            color: var(--color-text);
         }
 
         /* ============================================
@@ -1117,73 +970,204 @@
         .reviews-header {
             text-align: center;
             max-width: 640px;
-            margin: 0 auto 80px;
+            margin: 0 auto 64px;
         }
 
-        .reviews-header h2 {
-            margin-bottom: 20px;
-        }
+        .reviews-header h2 { margin-bottom: 16px; }
 
         .reviews-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
         }
 
         .review-card {
             background: var(--color-bg);
             border-radius: var(--radius-lg);
-            padding: 40px;
-            border: 1px solid var(--color-border);
+            padding: 36px;
             transition: all var(--transition-base);
+            position: relative;
         }
 
         .review-card:hover {
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-md);
             transform: translateY(-4px);
         }
 
         .review-stars {
-            display: flex;
-            gap: 4px;
+            color: var(--color-accent);
+            font-size: 1rem;
+            letter-spacing: 3px;
             margin-bottom: 20px;
         }
 
-        .review-star {
-            color: #fbbf24;
-            font-size: 1.1rem;
-        }
-
         .review-text {
-            font-size: 1rem;
-            line-height: 1.7;
+            font-size: 0.95rem;
             color: var(--color-text-secondary);
-            margin-bottom: 24px;
+            line-height: 1.75;
             font-style: italic;
+            margin-bottom: 24px;
         }
 
         .review-author {
-            font-weight: 600;
-            color: var(--color-text);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .review-avatar {
+            width: 44px;
+            height: 44px;
+            background: var(--color-primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--color-primary);
             font-size: 0.9rem;
         }
 
-        /* ============================================
-           FAQ SECTION
-           ============================================ */
-        .faq {
-            background: var(--color-bg);
+        .review-author-info strong {
+            display: block;
+            font-size: 0.88rem;
+            color: var(--color-text);
         }
 
-        .faq-header {
+        .review-author-info span {
+            font-size: 0.78rem;
+            color: var(--color-text-light);
+        }
+
+        .review-quote {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            font-size: 3rem;
+            color: var(--color-primary);
+            opacity: 0.1;
+            font-family: var(--font-heading);
+            line-height: 1;
+        }
+
+        /* ============================================
+           WHY CHOOSE US
+           ============================================ */
+        .why {
+            background: var(--color-primary);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-bg-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.05;
+            background-image: radial-gradient(circle at 1px 1px, #fff 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+
+        .why .container { position: relative; z-index: 2; }
+
+        .why-header {
             text-align: center;
             max-width: 640px;
             margin: 0 auto 80px;
         }
 
-        .faq-header h2 {
-            margin-bottom: 20px;
+        .why-header .section-label { color: var(--color-accent); }
+        .why-header .section-label::before { background: var(--color-accent); }
+        .why-header h2 { color: #fff; margin-bottom: 16px; }
+
+        .why-header p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1.05rem;
         }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .why-card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            transition: all var(--transition-base);
+        }
+
+        .why-card:hover {
+            background: rgba(255,255,255,0.12);
+            transform: translateY(-6px);
+        }
+
+        .why-card-icon {
+            width: 52px;
+            height: 52px;
+            background: rgba(255,255,255,0.12);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 24px;
+        }
+
+        .why-card h3 { font-size: 1.2rem; margin-bottom: 12px; color: #fff; }
+
+        .why-card p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.7;
+        }
+
+        .why-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 64px;
+            padding-top: 48px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .why-stat { text-align: center; }
+
+        .why-stat-number {
+            font-family: var(--font-heading);
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: var(--color-accent);
+        }
+
+        .why-stat-label {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.6);
+            margin-top: 4px;
+        }
+
+        .why-stat-divider {
+            width: 1px;
+            height: 60px;
+            background: rgba(255,255,255,0.12);
+        }
+
+        /* ============================================
+           FAQ SECTION
+           ============================================ */
+        .faq { background: var(--color-bg); }
+
+        .faq-header {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto 64px;
+        }
+
+        .faq-header h2 { margin-bottom: 16px; }
 
         .faq-list {
             max-width: 800px;
@@ -1191,67 +1175,76 @@
         }
 
         .faq-item {
-            background: var(--color-surface);
-            border-radius: var(--radius-md);
-            margin-bottom: 16px;
-            border: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
             overflow: hidden;
         }
 
+        .faq-item:first-child { border-top: 1px solid var(--color-border); }
+
         .faq-question {
-            width: 100%;
-            padding: 24px 28px;
-            background: none;
-            border: none;
-            text-align: left;
-            font-family: var(--font-body);
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--color-text);
-            cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: background-color var(--transition-fast);
+            padding: 24px 0;
+            cursor: pointer;
+            gap: 16px;
+            transition: color var(--transition-fast);
         }
 
-        .faq-question:hover {
-            background: var(--color-bg);
+        .faq-question:hover { color: var(--color-primary); }
+
+        .faq-question h3 {
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            font-weight: 600;
+            letter-spacing: 0;
         }
 
-        .faq-question-icon {
-            width: 24px;
-            height: 24px;
+        .faq-toggle {
+            width: 32px;
+            height: 32px;
+            min-width: 32px;
+            background: var(--color-primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-base);
+        }
+
+        .faq-toggle svg {
+            width: 14px;
+            height: 14px;
             color: var(--color-primary);
             transition: transform var(--transition-base);
         }
 
-        .faq-item.active .faq-question-icon {
+        .faq-item.active .faq-toggle {
+            background: var(--color-primary);
+        }
+
+        .faq-item.active .faq-toggle svg {
+            color: #fff;
             transform: rotate(45deg);
         }
 
         .faq-answer {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .faq-item.active .faq-answer {
-            max-height: 200px;
-            padding: 0 28px 24px 28px;
-        }
-
-        .faq-answer p {
+        .faq-answer-inner {
+            padding: 0 0 24px;
+            font-size: 0.95rem;
             color: var(--color-text-secondary);
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         /* ============================================
            CONTACT SECTION
            ============================================ */
-        .contact {
-            background: var(--color-surface);
-        }
+        .contact { background: var(--color-surface); }
 
         .contact-grid {
             display: grid;
@@ -1260,13 +1253,8 @@
             align-items: start;
         }
 
-        .contact-left h2 {
-            margin-bottom: 16px;
-        }
-
-        .contact-left .section-description {
-            margin-bottom: 48px;
-        }
+        .contact-left h2 { margin-bottom: 16px; }
+        .contact-left .section-description { margin-bottom: 48px; }
 
         .contact-info-list {
             display: flex;
@@ -1293,11 +1281,6 @@
             font-size: 1.2rem;
         }
 
-        .contact-info-icon.emergency {
-            background: var(--color-emergency-light);
-            color: var(--color-emergency);
-        }
-
         .contact-info-text h4 {
             font-family: var(--font-body);
             font-size: 0.9rem;
@@ -1316,87 +1299,52 @@
             font-weight: 500;
         }
 
-        .contact-info-text a:hover {
-            color: var(--color-primary-dark);
-        }
+        .contact-info-text a:hover { color: var(--color-primary-dark); }
 
-        .contact-right {
-            position: relative;
-        }
+        .contact-right { position: relative; }
 
-        .contact-form {
+        .contact-hours-card {
             background: var(--color-bg);
             border-radius: var(--radius-lg);
             padding: 40px;
-            border: 1px solid var(--color-border);
         }
 
-        .contact-form h3 {
-            margin-bottom: 24px;
-            font-size: 1.3rem;
+        .contact-hours-card h3 { margin-bottom: 24px; font-size: 1.3rem; }
+
+        .hours-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
         }
 
-        .form-group {
-            margin-bottom: 20px;
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--color-border);
         }
 
-        .form-label {
-            display: block;
-            font-weight: 500;
-            font-size: 0.88rem;
-            color: var(--color-text);
-            margin-bottom: 6px;
-        }
+        .hours-item:last-child { border-bottom: none; padding-bottom: 0; }
+        .hours-day { font-weight: 500; font-size: 0.9rem; }
+        .hours-time { font-size: 0.88rem; color: var(--color-text-secondary); }
+        .hours-time.closed { color: var(--color-text-light); }
 
-        .form-input,
-        .form-textarea {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-sm);
-            font-family: var(--font-body);
-            font-size: 0.9rem;
-            background: var(--color-surface);
-            color: var(--color-text);
-            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-        }
-
-        .form-input:focus,
-        .form-textarea:focus {
-            outline: none;
-            border-color: var(--color-primary);
-            box-shadow: 0 0 0 3px rgba(26, 107, 90, 0.1);
-        }
-
-        .form-textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .form-submit {
-            width: 100%;
-            justify-content: center;
-            margin-top: 8px;
-        }
-
-        .contact-emergency {
+        .contact-cta {
             margin-top: 32px;
-            background: linear-gradient(135deg, var(--color-emergency), #b91c1c);
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
             border-radius: var(--radius-lg);
-            padding: 32px;
+            padding: 40px;
             color: #fff;
             text-align: center;
         }
 
-        .contact-emergency h3 {
-            color: #fff;
-            margin-bottom: 12px;
-        }
+        .contact-cta h3 { color: #fff; margin-bottom: 12px; }
 
-        .contact-emergency p {
-            color: rgba(255,255,255,0.85);
+        .contact-cta p {
+            color: rgba(255,255,255,0.75);
             font-size: 0.92rem;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         /* ============================================
@@ -1441,10 +1389,7 @@
             color: var(--color-text);
         }
 
-        .footer-links {
-            display: flex;
-            gap: 28px;
-        }
+        .footer-links { display: flex; gap: 28px; }
 
         .footer-links a {
             font-size: 0.82rem;
@@ -1452,9 +1397,7 @@
             transition: color var(--transition-fast);
         }
 
-        .footer-links a:hover {
-            color: var(--color-primary);
-        }
+        .footer-links a:hover { color: var(--color-primary); }
 
         .footer-copy {
             font-size: 0.78rem;
@@ -1466,38 +1409,47 @@
         }
 
         /* ============================================
+           SIRCLE BANNER
+           ============================================ */
+        .sircle-banner {
+            background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
+            color: #fff;
+            padding: 48px 0;
+            text-align: center;
+        }
+
+        .sircle-banner-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .sircle-banner p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .sircle-banner a {
+            color: var(--color-accent);
+            font-weight: 600;
+            transition: color var(--transition-fast);
+        }
+
+        .sircle-banner a:hover {
+            color: #fff;
+        }
+
+        /* ============================================
            SCROLL REVEAL DEFAULTS
            ============================================ */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-        }
-
-        .reveal-left {
-            opacity: 0;
-            transform: translateX(-40px);
-        }
-
-        .reveal-right {
-            opacity: 0;
-            transform: translateX(40px);
-        }
-
-        .reveal-scale {
-            opacity: 0;
-            transform: scale(0.95);
-        }
-
-        /* Hero elements: visible by default, GSAP animates them in */
-        .hero-anim {
-            opacity: 1;
-            transform: none;
-        }
-
-        .hero-anim-right {
-            opacity: 1;
-            transform: none;
-        }
+        .reveal { opacity: 0; transform: translateY(40px); }
+        .reveal-left { opacity: 0; transform: translateX(-40px); }
+        .reveal-right { opacity: 0; transform: translateX(40px); }
+        .reveal-scale { opacity: 0; transform: scale(0.95); }
+        .hero-anim { opacity: 1; transform: none; }
+        .hero-anim-right { opacity: 1; transform: none; }
 
         /* ============================================
            RESPONSIVE
@@ -1509,206 +1461,73 @@
                 gap: 48px;
             }
 
-            .hero-content {
-                max-width: 600px;
-                margin: 0 auto;
-            }
+            .hero-content { max-width: 600px; margin: 0 auto; }
+            .hero-text { margin-left: auto; margin-right: auto; }
+            .hero-actions { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .hero-visual { max-width: 500px; margin: 0 auto; }
 
-            .hero-text {
-                margin-left: auto;
-                margin-right: auto;
-            }
+            .about-grid { grid-template-columns: 1fr; gap: 48px; }
+            .about-image { max-height: 400px; }
 
-            .hero-actions {
-                justify-content: center;
-            }
+            .kids-inner { grid-template-columns: 1fr; gap: 48px; }
+            .kids-visual { max-height: 380px; }
 
-            .hero-stats {
-                justify-content: center;
-            }
+            .services-header { flex-direction: column; align-items: flex-start; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
 
-            .hero-visual {
-                max-width: 500px;
-                margin: 0 auto;
-            }
+            .reviews-grid { grid-template-columns: repeat(2, 1fr); }
 
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 48px;
-            }
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
 
-            .kids-grid {
-                grid-template-columns: 1fr;
-                gap: 48px;
-            }
-
-            .services-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 48px;
-            }
+            .contact-grid { grid-template-columns: 1fr; gap: 48px; }
         }
 
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
+            .nav-links { display: none; }
+            .nav-mobile-toggle { display: block; }
+            .hero-inner { padding: 100px 0 60px; }
+            .hero-image-wrapper { height: 360px; }
+            .hero-stats { gap: 24px; }
+            .hero-floating-card { bottom: -16px; left: -8px; padding: 14px 18px; }
+            .hero-floating-card-2 { top: 16px; right: -8px; padding: 12px 16px; }
 
-            .nav-mobile-toggle {
-                display: block;
-            }
+            .services-grid { grid-template-columns: 1fr; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+            .why-card { padding: 28px; }
 
-            .hero-inner {
-                padding: 100px 0 60px;
-            }
+            .why-bottom { flex-wrap: wrap; gap: 24px; }
+            .why-stat-divider { display: none; }
 
-            .hero-stats {
-                gap: 24px;
-            }
+            .about-image { height: 300px; }
+            .kids-visual { height: 320px; }
 
-            .hero-floating-card {
-                bottom: -16px;
-                left: -8px;
-                padding: 14px 18px;
-            }
+            .contact-hours-card { padding: 28px; }
+            .contact-cta { padding: 28px; }
 
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .service-card {
-                padding: 28px;
-            }
-
-            .reviews-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-form {
-                padding: 28px;
-            }
-
-            .contact-emergency {
-                padding: 28px;
-            }
-
-            .footer-inner {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .footer-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .map-section {
-                height: 280px;
-            }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .footer-links { flex-wrap: wrap; justify-content: center; }
+            .map-section { height: 280px; }
         }
 
         @media (max-width: 480px) {
-            .hero-stats {
-                flex-direction: column;
-                gap: 20px;
-                align-items: center;
-            }
+            .hero-stats { flex-direction: column; gap: 20px; align-items: center; }
+            .about-values { grid-template-columns: 1fr; }
+            .hero-badge { font-size: 0.75rem; padding: 6px 16px; }
+            .hero-inner { padding: 90px 0 48px; }
+            .hero-image-wrapper { height: 280px; }
 
-            .about-values {
-                grid-template-columns: 1fr;
-            }
-
-            .kids-features {
-                gap: 16px;
-            }
-
-            .hero-badge {
-                font-size: 0.75rem;
-                padding: 6px 16px;
-            }
-
-            .hero-inner {
-                padding: 90px 0 48px;
-            }
-
-            .hero-floating-card {
-                bottom: -12px;
-                left: -4px;
-                padding: 12px 16px;
-            }
-
-            .hero-floating-icon {
-                width: 40px;
-                height: 40px;
-                font-size: 1.1rem;
-            }
-
-            .hero-floating-text strong {
-                font-size: 0.82rem;
-            }
-
-            .hero-floating-text span {
-                font-size: 0.72rem;
-            }
-
-            .btn {
-                padding: 14px 28px;
-                font-size: 0.88rem;
-                min-height: 48px;
-            }
-
-            .btn-primary {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .hero-actions {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .hero-actions .btn-secondary {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .section {
-                padding: clamp(56px, 10vw, 160px) 0;
-            }
-
-            .mobile-menu-link {
-                font-size: 2rem;
-            }
-
-            .contact-info-item {
-                gap: 12px;
-            }
-
-            .contact-info-icon {
-                width: 44px;
-                height: 44px;
-                min-width: 44px;
-            }
+            .btn { padding: 14px 28px; font-size: 0.88rem; min-height: 48px; }
+            .btn-primary { width: 100%; justify-content: center; }
+            .hero-actions { flex-direction: column; width: 100%; }
+            .hero-actions .btn-secondary { width: 100%; justify-content: center; }
+            .section { padding: clamp(56px, 10vw, 160px) 0; }
+            .mobile-menu-link { font-size: 2rem; }
         }
 
-        /* ============================================
-           CURSOR / SELECTION STYLES
-           ============================================ */
-        ::selection {
-            background: var(--color-primary);
-            color: #fff;
-        }
-
-        /* ============================================
-           SMOOTH SCROLL OFFSET FOR FIXED NAV
-           ============================================ */
-        section[id] {
-            scroll-margin-top: 80px;
-        }
+        ::selection { background: var(--color-primary); color: #fff; }
+        section[id] { scroll-margin-top: 80px; }
 
         /* ============================================
            LOADING ANIMATION
@@ -1724,10 +1543,7 @@
             transition: opacity 0.5s ease, visibility 0.5s ease;
         }
 
-        .page-loader.loaded {
-            opacity: 0;
-            visibility: hidden;
-        }
+        .page-loader.loaded { opacity: 0; visibility: hidden; }
 
         .loader-logo {
             font-family: var(--font-heading);
@@ -1755,12 +1571,15 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Sluit menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
         <div class="mobile-menu-inner">
             <nav class="mobile-menu-nav">
                 <a href="#home" class="mobile-menu-link">Home</a>
                 <a href="#over-ons" class="mobile-menu-link">Over ons</a>
-                <a href="#diensten" class="mobile-menu-link">Diensten</a>
                 <a href="#kinderen" class="mobile-menu-link">Kinderen</a>
+                <a href="#behandelingen" class="mobile-menu-link">Behandelingen</a>
                 <a href="#reviews" class="mobile-menu-link">Reviews</a>
                 <a href="#contact" class="mobile-menu-link">Contact</a>
             </nav>
@@ -1779,14 +1598,17 @@
         <div class="container">
             <div class="nav-inner">
                 <a href="#home" class="nav-logo">
-                    <div class="nav-logo-icon">🦷</div>
+                    <div class="nav-logo-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 4 6 4 10c0 3 1.5 5.5 4 7.5L12 22l4-4.5c2.5-2 4-4.5 4-7.5 0-4-4-8-8-8z"/><path d="M12 2c-1 3-1 6 0 8s1 5 0 8"/></svg>
+                    </div>
                     Tandarts Den Haag
                 </a>
 
                 <div class="nav-links">
-                    <a href="#diensten">Diensten</a>
-                    <a href="#kinderen">Kinderen</a>
+                    <a href="#behandelingen">Behandelingen</a>
                     <a href="#over-ons">Over ons</a>
+                    <a href="#kinderen">Kinderen</a>
+                    <a href="#reviews">Reviews</a>
                     <a href="#contact">Contact</a>
                     <a href="#contact" class="btn btn-primary nav-cta">Afspraak maken</a>
                 </div>
@@ -1812,47 +1634,53 @@
                 <div class="hero-content">
                     <div class="hero-badge hero-anim">
                         <span class="hero-badge-dot"></span>
-                        Valkenbosplein 21, Den Haag
+                        Valkenbosplein, Den Haag
                     </div>
-                    <h1 class="hero-anim">Moderne tandheelkunde voor <em>het hele gezin</em></h1>
-                    <p class="hero-text hero-anim">Welkom bij Tandarts Den Haag! Wij bieden professionele tandheelkundige zorg in een kindvriendelijke omgeving. Van preventie tot esthetische tandheelkunde — voor het hele gezin.</p>
+                    <h1 class="hero-anim">Een beter leven begint met een <em>mooie glimlach</em></h1>
+                    <p class="hero-text hero-anim">Uw vertrouwde tandarts voor gebitscontrole, preventie, esthetische tandheelkunde en kindvriendelijke behandelingen. Met persoonlijke aandacht en de nieuwste technologie.</p>
                     <div class="hero-actions hero-anim">
                         <a href="#contact" class="btn btn-primary">
                             Afspraak maken
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                         </a>
-                        <a href="#kinderen" class="btn btn-kids">Kindvriendelijk ✨</a>
+                        <a href="#behandelingen" class="btn btn-secondary">Onze behandelingen</a>
                     </div>
                     <div class="hero-stats hero-anim">
                         <div class="hero-stat">
-                            <div class="hero-stat-number">1,5+</div>
-                            <div class="hero-stat-label">Jaar (kinderen)</div>
+                            <div class="hero-stat-number">6</div>
+                            <div class="hero-stat-label">Behandelingen</div>
                         </div>
                         <div class="hero-stat">
-                            <div class="hero-stat-number">10+</div>
-                            <div class="hero-stat-label">Diensten</div>
+                            <div class="hero-stat-number">4.8</div>
+                            <div class="hero-stat-label">Google Reviews</div>
                         </div>
                         <div class="hero-stat">
-                            <div class="hero-stat-number">5⭐</div>
-                            <div class="hero-stat-label">Gemiddelde review</div>
+                            <div class="hero-stat-number">1.5</div>
+                            <div class="hero-stat-label">Jaar — kinderen welkom</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="hero-visual hero-anim-right">
-                    <div class="hero-pattern">
-                        <div class="hero-pattern-content">
-                            <div class="hero-pattern-icon">👨‍⚕️</div>
-                            <h3>Professionele zorg</h3>
-                            <p>Ervaren tandartsen met moderne technieken en persoonlijke aandacht voor elke patiënt</p>
+                    <div class="hero-image-wrapper">
+                        <div class="hero-image-placeholder">
+                            <div class="hero-icon-large">🦷</div>
+                            <p>Tandarts Den Haag</p>
+                            <p class="hero-sub">Valkenbosplein 21</p>
                         </div>
                     </div>
                     <div class="hero-floating-card">
-                        <div class="hero-floating-icon">👶</div>
-                        <div class="hero-floating-text">
-                            <strong>Gewoon Gaaf methode</strong>
-                            <span>Kinderen vanaf 1,5 jaar</span>
+                        <div class="hero-floating-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                         </div>
+                        <div class="hero-floating-text">
+                            <strong>Gewoon Gaaf</strong>
+                            <span>Kindvriendelijke praktijk</span>
+                        </div>
+                    </div>
+                    <div class="hero-floating-card-2">
+                        <div class="stars">★★★★★</div>
+                        <span>Uitstekend beoordeeld</span>
                     </div>
                 </div>
             </div>
@@ -1864,23 +1692,20 @@
         <div class="container">
             <div class="about-header reveal">
                 <div class="section-label">Over ons</div>
-                <h2>Uw vertrouwde tandarts in Den Haag</h2>
+                <h2>Uw tandarts op het Valkenbosplein</h2>
             </div>
 
             <div class="about-grid">
                 <div class="about-image reveal-left">
-                    <div class="about-visual-content">
-                        <div class="about-visual-icon">🏥</div>
-                        <div class="about-visual-text">
-                            <h3>Moderne praktijk</h3>
-                            <p>Een warme, professionele omgeving met de nieuwste apparatuur en technieken</p>
-                        </div>
+                    <div class="about-image-placeholder">
+                        <div class="icon-xl">🏥</div>
+                        <p>Moderne praktijk</p>
                     </div>
                 </div>
                 <div class="about-content reveal-right">
-                    <p>Bij Tandarts Den Haag staat persoonlijke zorg centraal. Onze praktijk aan het Valkenbosplein biedt een breed scala aan tandheelkundige behandelingen in een moderne en vriendelijke omgeving.</p>
-                    <p>We zijn gespecialiseerd in het behandelen van zowel volwassenen als kinderen. Met onze <strong>Gewoon Gaaf methode</strong> maken we tandheelkunde leuk en begrijpelijk voor kinderen vanaf 1,5 jaar.</p>
-                    <p>Of u nu komt voor een reguliere controle, esthetische tandheelkunde of een spoedbehandeling — ons ervaren team staat klaar om u te helpen met de beste zorg.</p>
+                    <p>Bij Tandarts Den Haag geloven we in persoonlijke aandacht en zorg op maat. Of u nu komt voor een reguliere controle, een tandheelkundige behandeling of cosmetische ingrepen, ons team staat voor u klaar om u de best mogelijke zorg te bieden.</p>
+                    <p>We begrijpen dat een bezoek aan de tandarts soms gepaard gaat met zorgen, daarom streven we ernaar om een ontspannen en geruststellende sfeer te creëren. Met ons vaste team proberen wij uw tandartsbezoek zo aangenaam mogelijk te maken.</p>
+                    <p>Wanneer u voor het eerst bij ons in de stoel plaatsneemt zullen wij uw gebit controleren met behulp van röntgenfoto's. Vervolgens stellen wij een behandelplan voor u op zodat u precies weet wat u kunt verwachten.</p>
 
                     <div class="about-values">
                         <div class="about-value">
@@ -1889,7 +1714,16 @@
                             </div>
                             <div class="about-value-text">
                                 <h4>Persoonlijke zorg</h4>
-                                <p>Tijd en aandacht voor elke patiënt</p>
+                                <p>Zorg op maat voor elke patiënt</p>
+                            </div>
+                        </div>
+                        <div class="about-value">
+                            <div class="about-value-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            </div>
+                            <div class="about-value-text">
+                                <h4>Moderne technologie</h4>
+                                <p>Geavanceerde apparatuur</p>
                             </div>
                         </div>
                         <div class="about-value">
@@ -1897,8 +1731,8 @@
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                             </div>
                             <div class="about-value-text">
-                                <h4>Hele gezin</h4>
-                                <p>Volwassenen én kinderen welkom</p>
+                                <h4>Vast team</h4>
+                                <p>Vertrouwde gezichten</p>
                             </div>
                         </div>
                         <div class="about-value">
@@ -1906,95 +1740,11 @@
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                             </div>
                             <div class="about-value-text">
-                                <h4>Centrum Den Haag</h4>
-                                <p>Valkenbosplein 21</p>
-                            </div>
-                        </div>
-                        <div class="about-value">
-                            <div class="about-value-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            </div>
-                            <div class="about-value-text">
-                                <h4>Moderne technieken</h4>
-                                <p>Nieuwste apparatuur & methoden</p>
+                                <h4>Valkenbosplein</h4>
+                                <p>Centraal in Den Haag</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services section" id="diensten">
-        <div class="container">
-            <div class="services-header">
-                <div class="services-header-left reveal">
-                    <div class="section-label">Onze diensten</div>
-                    <h2>Complete tandheelkundige zorg</h2>
-                    <p class="section-description">Van preventieve zorg tot esthetische behandelingen — wij bieden alles wat u nodig heeft voor een gezond en mooi gebit.</p>
-                </div>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card reveal">
-                    <div class="service-icon">🔍</div>
-                    <h3>Gebitscontrole & preventie</h3>
-                    <p>Regelmatige controles zijn essentieel voor een gezond gebit. Wij controleren uw tanden en tandvlees grondig en geven advies voor optimale mondverzorging.</p>
-                    <span class="service-link">
-                        Meer informatie
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                    </span>
-                </div>
-
-                <div class="service-card reveal">
-                    <div class="service-icon">✨</div>
-                    <h3>Esthetische tandheelkunde</h3>
-                    <p>Voor een mooiere glimlach bieden wij verschillende esthetische behandelingen, zoals tandsteen verwijdering, whitening en cosmetische restauraties.</p>
-                    <span class="service-link">
-                        Meer informatie
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                    </span>
-                </div>
-
-                <div class="service-card reveal">
-                    <div class="service-icon">🩹</div>
-                    <h3>Vullingen & reparaties</h3>
-                    <p>Gaatjes in uw tanden repareren wij met hoogwaardige vulmaterialen. Van kunststof tot keramiek — altijd passend bij uw wensen.</p>
-                    <span class="service-link">
-                        Meer informatie
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                    </span>
-                </div>
-
-                <div class="service-card reveal">
-                    <div class="service-icon">🦷</div>
-                    <h3>Wortelkanaalbehandeling</h3>
-                    <p>Bij ontstoken tandwortels voeren wij zorgvuldige wortelkanaalbehandelingen uit om uw tand te behouden en pijn weg te nemen.</p>
-                    <span class="service-link">
-                        Meer informatie
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                    </span>
-                </div>
-
-                <div class="service-card reveal">
-                    <div class="service-icon">📸</div>
-                    <h3>Röntgenfoto's</h3>
-                    <p>Voor een nauwkeurige diagnose maken wij digitale röntgenfoto's. Snel, veilig en met minimale stralingsdosis.</p>
-                    <span class="service-link">
-                        Meer informatie
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                    </span>
-                </div>
-
-                <div class="service-card reveal">
-                    <div class="service-icon">🦷</div>
-                    <h3>Extracties & chirurgie</h3>
-                    <p>Wanneer een tand niet meer te redden is, voeren wij extracties uit met zo min mogelijk ongemak. Ook wijsheidstanden en kleine chirurgische ingrepen.</p>
-                    <span class="service-link">
-                        Meer informatie
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                    </span>
                 </div>
             </div>
         </div>
@@ -2002,53 +1752,101 @@
 
     <!-- Kids Section -->
     <section class="kids section" id="kinderen">
-        <div class="kids-bg-pattern"></div>
         <div class="container">
-            <div class="kids-header">
-                <div class="section-label reveal">Kindvriendelijk</div>
-                <h2 class="reveal">Gewoon Gaaf voor kinderen</h2>
-                <p class="section-description reveal">Wij maken tandheelkunde leuk en begrijpelijk voor kinderen vanaf 1,5 jaar. Met onze speciale Gewoon Gaaf methode voelen kleine patiëntjes zich op hun gemak.</p>
-            </div>
-
-            <div class="kids-grid">
-                <div class="kids-visual reveal-left">
-                    <div class="kids-visual-content">
-                        <span class="kids-visual-emoji">🌟</span>
-                        <h3>Gewoon Gaaf!</h3>
-                        <p>Onze speciale methode maakt het tandartsbezoek tot een positieve ervaring</p>
-                    </div>
-                </div>
-
-                <div class="kids-content reveal-right">
-                    <h3>Tandheelkunde vanaf 1,5 jaar</h3>
-                    <p>Kinderen zijn welkom vanaf 1,5 jaar. We introduceren ze op een speelse manier aan de tandarts, zodat ze geen angst ontwikkelen maar juist positieve ervaringen opdoen.</p>
-                    <p>Onze kindvriendelijke aanpak zorgt ervoor dat uw kind met plezier naar de tandarts komt en leert hoe belangrijk goede mondverzorging is.</p>
+            <div class="kids-inner">
+                <div class="kids-content reveal-left">
+                    <div class="section-label">Kindvriendelijk</div>
+                    <h2>Gewoon Gaaf — speciaal voor kinderen</h2>
+                    <p>Onze praktijk is zeer kindvriendelijk. Wij werken middels de Gewoon Gaaf methode, waarbij wij streven naar een veilige omgeving waarin kinderen op een goede en fijne manier kennis kunnen maken met de tandarts.</p>
+                    <p>Wij brengen kinderen graag het belang van een gezonde mond bij en leren ze om goed om te gaan met hun tanden en kiezen.</p>
 
                     <div class="kids-features">
                         <div class="kids-feature">
+                            <div class="kids-feature-icon">👶</div>
+                            <div class="kids-feature-text">Kennismaking vanaf 1,5 jaar</div>
+                        </div>
+                        <div class="kids-feature">
+                            <div class="kids-feature-icon">🛡️</div>
+                            <div class="kids-feature-text">Veilige en vertrouwde omgeving</div>
+                        </div>
+                        <div class="kids-feature">
                             <div class="kids-feature-icon">🎮</div>
-                            <div class="kids-feature-text">Spelenderwijs leren over tandverzorging</div>
+                            <div class="kids-feature-text">Speelse en ongedwongen aanpak</div>
                         </div>
                         <div class="kids-feature">
-                            <div class="kids-feature-icon">😊</div>
-                            <div class="kids-feature-text">Geduldig en empathisch team</div>
-                        </div>
-                        <div class="kids-feature">
-                            <div class="kids-feature-icon">🏆</div>
-                            <div class="kids-feature-text">Beloningssysteem voor brave kinderen</div>
-                        </div>
-                        <div class="kids-feature">
-                            <div class="kids-feature-icon">👨‍👩‍👧‍👦</div>
-                            <div class="kids-feature-text">Ouders zijn altijd welkom bij de behandeling</div>
+                            <div class="kids-feature-icon">📚</div>
+                            <div class="kids-feature-text">Leren over mondhygiëne op kindniveau</div>
                         </div>
                     </div>
+                </div>
+                <div class="kids-visual reveal-right">
+                    <div class="kids-visual-content">
+                        <div class="icon-xxl">👦🦷</div>
+                        <p>Gewoon Gaaf methode</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div style="margin-top: 32px;">
-                        <a href="#contact" class="btn btn-kids">
-                            Afspraak maken voor kind
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </a>
+    <!-- Services Section -->
+    <section class="services section" id="behandelingen">
+        <div class="container">
+            <div class="services-header">
+                <div class="services-header-left reveal">
+                    <div class="section-label">Behandelingen</div>
+                    <h2>Onze tandheelkundige diensten</h2>
+                    <p class="section-description">Van preventieve zorg tot cosmetische behandelingen — wij bieden een compleet scala aan tandheelkundige diensten.</p>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     </div>
+                    <h3>Wortelkanaalbehandeling</h3>
+                    <p>Red uw tand met een wortelkanaalbehandeling voor pijnverlichting en behoud van uw natuurlijke gebit.</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
+                    </div>
+                    <h3>Extracties</h3>
+                    <p>Professionele oplossingen voor problematische tanden. Wij bevorderen het welzijn van uw gebit met zorgvuldige extracties.</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3>Röntgenfoto's</h3>
+                    <p>Stralend inzicht in uw mondgezondheid met geavanceerde digitale röntgenfoto's voor nauwkeurige diagnoses.</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <h3>Cosmetische tandheelkunde</h3>
+                    <p>Verbeter uw glimlach met professionele cosmetische behandelingen. Whitening, facings en meer.</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <h3>Vullingen</h3>
+                    <p>Herstel uw gebit met duurzame vullingen voor behoud en comfort. Wij gebruiken de nieuwste materialen.</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    </div>
+                    <h3>Parodontitis behandeling</h3>
+                    <p>Behandel parodontitis voor een gezond tandvlees. Preventie en behandeling voor langdurige mondgezondheid.</p>
                 </div>
             </div>
         </div>
@@ -2058,46 +1856,159 @@
     <section class="reviews section" id="reviews">
         <div class="container">
             <div class="reviews-header">
-                <div class="section-label reveal">Reviews</div>
+                <div class="section-label reveal" style="justify-content: center;">Reviews</div>
                 <h2 class="reveal">Wat onze patiënten zeggen</h2>
-                <p class="section-description reveal">Lees wat andere patiënten over ons zeggen. Hun ervaringen spreken voor zich.</p>
             </div>
 
             <div class="reviews-grid">
                 <div class="review-card reveal">
-                    <div class="review-stars">
-                        <span class="review-star">★</span>
-                        <span class="review-star">★</span>
-                        <span class="review-star">★</span>
-                        <span class="review-star">★</span>
-                        <span class="review-star">★</span>
+                    <div class="review-quote">"</div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Vanochtend had ik een kies gebroken. Ik kon vanmiddag al terecht. De behandeling was prima en verrassend snel. De receptionist was zeer vriendelijk en attent, ook de tandarts. De prijs was goed.</p>
+                    <div class="review-author">
+                        <div class="review-avatar">P</div>
+                        <div class="review-author-info">
+                            <strong>Patiënt</strong>
+                            <span>Google Review</span>
+                        </div>
                     </div>
-                    <p class="review-text">"Zeer vriendelijk personeel en moderne praktijk. Mijn kinderen gaan er graag naartoe dankzij de leuke aanpak. Echt een aanrader!"</p>
-                    <div class="review-author">— Sandra M.</div>
                 </div>
 
                 <div class="review-card reveal">
-                    <div class="review-stars">
-                        <span class="review-star">★</span>
-                        <span class="review-star">★</span>
-                        <span class="review-star">★</span>
-                        <span class="review-star">★</span>
-                        <span class="review-star">★</span>
+                    <div class="review-quote">"</div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Aardige medewerkers, vriendelijk en klantgericht. Hulpvaardig en flexibel bij het maken van afspraken. Moderne praktijk met no nonsense tandheelkunde.</p>
+                    <div class="review-author">
+                        <div class="review-avatar">M</div>
+                        <div class="review-author-info">
+                            <strong>M. de Vries</strong>
+                            <span>Google Review</span>
+                        </div>
                     </div>
-                    <p class="review-text">"Fantastische tandarts! Heel geduldig met kinderen en legt alles duidelijk uit. De praktijk ziet er mooi en schoon uit."</p>
-                    <div class="review-author">— Mark v.d. Berg</div>
                 </div>
 
                 <div class="review-card reveal">
-                    <div class="review-stars">
-                        <span class="review-star">★</span>
-                        <span class="review-star">★</span>
-                        <span class="review-star">★</span>
-                        <span class="review-star">★</span>
-                        <span class="review-star">★</span>
+                    <div class="review-quote">"</div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Net als vele anderen ben ik niet echt een fan van de tandarts, maar in deze praktijk weten ze me iedere keer weer gerust te stellen en rustig te maken. De angst is echt enorm verminderd!</p>
+                    <div class="review-author">
+                        <div class="review-avatar">S</div>
+                        <div class="review-author-info">
+                            <strong>S. Bakker</strong>
+                            <span>Google Review</span>
+                        </div>
                     </div>
-                    <p class="review-text">"Professionele zorg in een prettige omgeving. Mijn dochter van 3 jaar voelt zich hier helemaal op haar gemak. Top team!"</p>
-                    <div class="review-author">— Lisa K.</div>
+                </div>
+
+                <div class="review-card reveal">
+                    <div class="review-quote">"</div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Heel prettig geholpen, ook voor de kids zijn ze erg geduldig. Fijn dat ik voor mijn vervolg afspraak een bevestigingsmail kreeg inclusief kosten plaatje.</p>
+                    <div class="review-author">
+                        <div class="review-avatar">J</div>
+                        <div class="review-author-info">
+                            <strong>J. van Dijk</strong>
+                            <span>Google Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card reveal">
+                    <div class="review-quote">"</div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Fijne praktijk, zeer aardig personeel dat goed meedenkt en behulpzaam is. Kom al jaren bij deze tandarts en heb er zelfs een aardig reistijd voor over!</p>
+                    <div class="review-author">
+                        <div class="review-avatar">K</div>
+                        <div class="review-author-info">
+                            <strong>K. Jansen</strong>
+                            <span>Google Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card reveal">
+                    <div class="review-quote">"</div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Moderne praktijk met een warm team. Ze nemen echt de tijd om alles uit te leggen. Mijn kinderen gaan zelfs met plezier naar de tandarts!</p>
+                    <div class="review-author">
+                        <div class="review-avatar">L</div>
+                        <div class="review-author-info">
+                            <strong>L. Mulder</strong>
+                            <span>Google Review</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why section" id="waarom-wij">
+        <div class="why-bg-pattern"></div>
+        <div class="container">
+            <div class="why-header">
+                <div class="section-label reveal" style="justify-content: center;">Waarom wij</div>
+                <h2 class="reveal">Waarom patiënten kiezen voor Tandarts Den Haag</h2>
+                <p class="reveal">Wij geloven dat een bezoek aan de tandarts geen stress hoeft op te leveren. Daarom doen wij alles voor uw comfort en welzijn.</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card reveal">
+                    <div class="why-card-icon">🏥</div>
+                    <h3>Moderne apparatuur</h3>
+                    <p>Wij gebruiken geavanceerde bewezen technologie voor nauwkeurigere diagnoses en comfortabelere behandelingen.</p>
+                </div>
+
+                <div class="why-card reveal">
+                    <div class="why-card-icon">❤️</div>
+                    <h3>Persoonlijke aandacht</h3>
+                    <p>Geen lopende-bandwerk. Wij nemen de tijd voor elke patiënt en luisteren naar uw wensen en zorgen.</p>
+                </div>
+
+                <div class="why-card reveal">
+                    <div class="why-card-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Kindvriendelijk</h3>
+                    <p>Gewoon Gaaf gecertificeerd. Kinderen zijn welkom vanaf 1,5 jaar in een veilige, speelse omgeving.</p>
+                </div>
+
+                <div class="why-card reveal">
+                    <div class="why-card-icon">⚡</div>
+                    <h3>Spoedbehandelingen</h3>
+                    <p>Tandheelkundige noodgevallen? Wij staan altijd klaar om u zo snel mogelijk te helpen, ook bij spoed.</p>
+                </div>
+
+                <div class="why-card reveal">
+                    <div class="why-card-icon">📍</div>
+                    <h3>Centraal gelegen</h3>
+                    <p>Op het Valkenbosplein, midden in Den Haag. Goed bereikbaar met OV en voldoende parkeergelegenheid.</p>
+                </div>
+
+                <div class="why-card reveal">
+                    <div class="why-card-icon">💰</div>
+                    <h3>Transparante tarieven</h3>
+                    <p>Geen verrassingen. Wij informeren u vooraf over kosten en werken met vaste NZa-tarieven.</p>
+                </div>
+            </div>
+
+            <div class="why-bottom reveal">
+                <div class="why-stat">
+                    <div class="why-stat-number">6</div>
+                    <div class="why-stat-label">Behandelingen</div>
+                </div>
+                <div class="why-stat-divider"></div>
+                <div class="why-stat">
+                    <div class="why-stat-number">4.8</div>
+                    <div class="why-stat-label">Google Score</div>
+                </div>
+                <div class="why-stat-divider"></div>
+                <div class="why-stat">
+                    <div class="why-stat-number">5</div>
+                    <div class="why-stat-label">Dagen per week</div>
+                </div>
+                <div class="why-stat-divider"></div>
+                <div class="why-stat">
+                    <div class="why-stat-number">1.5</div>
+                    <div class="why-stat-label">Jaar — kinderen welkom</div>
                 </div>
             </div>
         </div>
@@ -2107,59 +2018,80 @@
     <section class="faq section" id="faq">
         <div class="container">
             <div class="faq-header">
-                <div class="section-label reveal">FAQ</div>
-                <h2 class="reveal">Veelgestelde vragen</h2>
-                <p class="section-description reveal">Hier vindt u antwoorden op de meest gestelde vragen over onze praktijk en behandelingen.</p>
+                <div class="section-label reveal" style="justify-content: center;">Veelgestelde vragen</div>
+                <h2 class="reveal">Alles wat u wilt weten</h2>
             </div>
 
             <div class="faq-list">
                 <div class="faq-item reveal">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        Vanaf welke leeftijd kunnen kinderen komen?
-                        <svg class="faq-question-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                    </button>
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Hoe kan ik een afspraak maken?</h3>
+                        <div class="faq-toggle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </div>
+                    </div>
                     <div class="faq-answer">
-                        <p>Kinderen zijn welkom vanaf 1,5 jaar. We gebruiken onze speciale Gewoon Gaaf methode om ze op een speelse manier kennis te laten maken met de tandarts en zo een positieve houding te ontwikkelen.</p>
+                        <div class="faq-answer-inner">U kunt een afspraak maken via de mail (info@tandartsdenhaag.nl), telefonisch (070 322 8438) of aan de receptie. Wij proberen u zo snel mogelijk in te plannen.</div>
                     </div>
                 </div>
 
                 <div class="faq-item reveal">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        Wat is de Gewoon Gaaf methode?
-                        <svg class="faq-question-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                    </button>
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Welk nummer bel ik bij spoedgevallen?</h3>
+                        <div class="faq-toggle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </div>
+                    </div>
                     <div class="faq-answer">
-                        <p>Gewoon Gaaf is onze kindvriendelijke aanpak waarbij we tandheelkunde op een speelse en begrijpelijke manier uitleggen. Kinderen leren over mondverzorging zonder angst, met beloningen en veel geduld van ons team.</p>
+                        <div class="faq-answer-inner">Voor spoed belt u 070 – 204 00 10. Ons team staat klaar om u bij tandheelkundige noodgevallen zo snel mogelijk te helpen.</div>
                     </div>
                 </div>
 
                 <div class="faq-item reveal">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        Hoe vaak moet ik voor controle komen?
-                        <svg class="faq-question-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                    </button>
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Worden mijn behandelingen vergoed?</h3>
+                        <div class="faq-toggle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </div>
+                    </div>
                     <div class="faq-answer">
-                        <p>We adviseren een controle elke 6 maanden voor volwassenen en kinderen. Bij sommige patiënten kan een kortere of langere interval wenselijk zijn, dit bespreken we altijd persoonlijk met u.</p>
+                        <div class="faq-answer-inner">Dit verschilt per zorgverzekeraar en polis. Voor de juiste vergoeding neemt u contact op met uw zorgverzekeraar. Wij werken met de vaste NZa-tarieven.</div>
                     </div>
                 </div>
 
                 <div class="faq-item reveal">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        Wat moet ik doen bij spoed?
-                        <svg class="faq-question-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                    </button>
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Kan ik mijn afspraak verzetten?</h3>
+                        <div class="faq-toggle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </div>
+                    </div>
                     <div class="faq-answer">
-                        <p>Voor spoedgevallen belt u ons spoednummer: 070-204 00 10. We proberen altijd tijd vrij te maken voor acute problemen zoals pijn, zwelling of een afgebroken tand.</p>
+                        <div class="faq-answer-inner">Ja, afspraken dienen uiterlijk 48 uur van te voren afgezegd te worden. Bel of mail ons om uw afspraak te verzetten. Bij te late afzegging zijn wij genoodzaakt een consult in rekening te brengen.</div>
                     </div>
                 </div>
 
                 <div class="faq-item reveal">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        Accepteren jullie alle tandartsverzekeringen?
-                        <svg class="faq-question-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                    </button>
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Vanaf welke leeftijd kunnen kinderen komen?</h3>
+                        <div class="faq-toggle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </div>
+                    </div>
                     <div class="faq-answer">
-                        <p>Ja, wij accepteren alle tandartsverzekeringen. We rekenen rechtstreeks af met uw verzekeraar voor behandelingen die onder de basisverzekering vallen. Voor aanvullende behandelingen informeren we u vooraf over de kosten.</p>
+                        <div class="faq-answer-inner">Kinderen kunnen al op de leeftijd van 1,5 jaar kennis maken met de stoel. Wij werken met de Gewoon Gaaf methode voor een veilige en leuke eerste kennismaking.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Hoe lang duurt het voor mijn prothese klaar is?</h3>
+                        <div class="faq-toggle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Meestal tussen de 4 à 6 weken levertijd. U kunt dit het beste bespreken met onze technicus voor een exacte planning.</div>
                     </div>
                 </div>
             </div>
@@ -2172,8 +2104,8 @@
             <div class="contact-grid">
                 <div class="contact-left">
                     <div class="section-label reveal">Contact</div>
-                    <h2 class="reveal">Maak een afspraak</h2>
-                    <p class="section-description reveal">Heeft u vragen of wilt u een afspraak maken? Neem gerust contact met ons op. We helpen u graag verder.</p>
+                    <h2 class="reveal">Neem contact met ons op</h2>
+                    <p class="section-description reveal">Heeft u een vraag of wilt u een afspraak maken? Wij staan graag voor u klaar.</p>
 
                     <div class="contact-info-list">
                         <div class="contact-info-item reveal">
@@ -2206,51 +2138,59 @@
                             </div>
                         </div>
 
-                        <div class="contact-info-item reveal">
-                            <div class="contact-info-icon emergency">
+                        <div class="contact-info-item reveal" id="spoed">
+                            <div class="contact-info-icon" style="background: #fef2f2; color: #dc2626;">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                             </div>
                             <div class="contact-info-text">
                                 <h4>Spoed</h4>
-                                <p><a href="tel:+31702040010">070-204 00 10</a><br><span style="font-size: 0.82rem; color: var(--color-text-light);">Voor acute tandpijn en spoedgevallen</span></p>
+                                <p>Spoednummer: <a href="tel:+31702040010">070 – 204 00 10</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="contact-right">
-                    <div class="contact-form reveal">
-                        <h3>Afspraak maken</h3>
-                        <form action="#" method="post" onsubmit="submitForm(event)">
-                            <div class="form-group">
-                                <label class="form-label" for="name">Naam</label>
-                                <input type="text" class="form-input" id="name" name="name" required>
+                    <div class="contact-hours-card reveal">
+                        <h3>Openingstijden</h3>
+                        <div class="hours-list">
+                            <div class="hours-item">
+                                <span class="hours-day">Maandag</span>
+                                <span class="hours-time">08:30 — 17:00</span>
                             </div>
-                            <div class="form-group">
-                                <label class="form-label" for="email">E-mail</label>
-                                <input type="email" class="form-input" id="email" name="email" required>
+                            <div class="hours-item">
+                                <span class="hours-day">Dinsdag</span>
+                                <span class="hours-time">08:30 — 17:00</span>
                             </div>
-                            <div class="form-group">
-                                <label class="form-label" for="phone">Telefoon</label>
-                                <input type="tel" class="form-input" id="phone" name="phone">
+                            <div class="hours-item">
+                                <span class="hours-day">Woensdag</span>
+                                <span class="hours-time">08:30 — 17:00</span>
                             </div>
-                            <div class="form-group">
-                                <label class="form-label" for="message">Bericht</label>
-                                <textarea class="form-textarea" id="message" name="message" placeholder="Geef aan voor welke behandeling u een afspraak wilt maken..."></textarea>
+                            <div class="hours-item">
+                                <span class="hours-day">Donderdag</span>
+                                <span class="hours-time">08:30 — 17:00</span>
                             </div>
-                            <button type="submit" class="btn btn-primary form-submit">
-                                Verstuur aanvraag
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22,2 15,22 11,13 2,9 22,2"/></svg>
-                            </button>
-                        </form>
+                            <div class="hours-item">
+                                <span class="hours-day">Vrijdag</span>
+                                <span class="hours-time">08:30 — 13:00</span>
+                            </div>
+                            <div class="hours-item">
+                                <span class="hours-day">Zaterdag</span>
+                                <span class="hours-time closed">Gesloten</span>
+                            </div>
+                            <div class="hours-item">
+                                <span class="hours-day">Zondag</span>
+                                <span class="hours-time closed">Gesloten</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="contact-emergency reveal">
-                        <h3>🚨 Spoedgeval?</h3>
-                        <p>Belt u ons spoednummer voor acute tandpijn, zwelling of andere spoedgevallen.</p>
-                        <a href="tel:+31702040010" class="btn btn-white">
+                    <div class="contact-cta reveal">
+                        <h3>Direct een afspraak?</h3>
+                        <p>Bel ons of stuur een e-mail. Wij reageren dezelfde werkdag.</p>
+                        <a href="tel:+31703228438" class="btn btn-white">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            Spoed: 070-204 00 10
+                            Bel 070 322 8438
                         </a>
                     </div>
                 </div>
@@ -2260,7 +2200,7 @@
 
     <!-- Map -->
     <div class="map-section">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.8!2d4.3123!3d52.0776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b0c8c5e8a123%3A0x0!2sValkenbosplein+21%2C+2563+CC+Den+Haag!5e0!3m2!1snl!2snl!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Valkenbosplein 21, Den Haag"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2460.8!2d4.2957!3d52.0753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b7a3e3e3e3e3%3A0x0!2sValkenbosplein+21%2C+2563+CC+Den+Haag!5e0!3m2!1snl!2snl!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Valkenbosplein 21, Den Haag"></iframe>
     </div>
 
     <!-- Footer -->
@@ -2271,7 +2211,7 @@
                 <div class="footer-links">
                     <a href="#home">Home</a>
                     <a href="#over-ons">Over ons</a>
-                    <a href="#diensten">Diensten</a>
+                    <a href="#behandelingen">Behandelingen</a>
                     <a href="#kinderen">Kinderen</a>
                     <a href="#contact">Contact</a>
                     <a href="#">Privacy</a>
@@ -2283,408 +2223,228 @@
         </div>
     </footer>
 
+    <!-- Sircle Banner -->
+    <div class="sircle-banner">
+        <div class="container">
+            <div class="sircle-banner-inner">
+                <p>Dit is een conceptontwerp door <a href="https://sirclecreative.com" target="_blank">Sircle Creative</a> — uw partner voor strategie, design & digitale groei.</p>
+            </div>
+        </div>
+    </div>
+
 </div><!-- .site-wrapper -->
 
-<!-- GSAP + ScrollTrigger -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-<script>
-    // ============================================
-    // PAGE LOADER
-    // ============================================
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            document.getElementById('pageLoader').classList.add('loaded');
-        }, 800);
-    });
-
-    // ============================================
-    // MOBILE MENU
-    // ============================================
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileToggle = document.getElementById('mobileToggle');
-    const mobileLinks = document.querySelectorAll('.mobile-menu-link');
-    const mobileBottom = document.querySelector('.mobile-menu-bottom');
-    let menuOpen = false;
-    let menuTimeline = null;
-
-    function openMobileMenu() {
-        menuOpen = true;
-        mobileToggle.classList.add('active');
-        mobileMenu.classList.add('active');
-        document.body.style.overflow = 'hidden';
-
-        if (menuTimeline) menuTimeline.kill();
-        menuTimeline = gsap.timeline();
-
-        gsap.set(mobileMenu, { visibility: 'visible', opacity: 1 });
-        gsap.set(mobileLinks, { opacity: 0, y: 30 });
-        gsap.set(mobileBottom, { opacity: 0, y: 20 });
-
-        menuTimeline
-            .to(mobileLinks, {
-                opacity: 1,
-                y: 0,
-                duration: 0.5,
-                stagger: 0.07,
-                ease: 'power3.out'
-            }, 0.1)
-            .to(mobileBottom, {
-                opacity: 1,
-                y: 0,
-                duration: 0.5,
-                ease: 'power3.out'
-            }, 0.35);
-    }
-
-    function closeMobileMenu() {
-        if (!menuOpen) return;
-        menuOpen = false;
-        mobileToggle.classList.remove('active');
-
-        if (menuTimeline) menuTimeline.kill();
-        menuTimeline = gsap.timeline({
-            onComplete: () => {
-                mobileMenu.classList.remove('active');
-                gsap.set(mobileMenu, { visibility: 'hidden', opacity: 0 });
-                document.body.style.overflow = '';
-            }
+    <script>
+        // Page Loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('pageLoader').classList.add('loaded');
+            }, 800);
         });
 
-        menuTimeline
-            .to(mobileBottom, {
-                opacity: 0,
-                y: 10,
-                duration: 0.25,
-                ease: 'power2.in'
-            })
-            .to(mobileLinks, {
-                opacity: 0,
-                y: -20,
-                duration: 0.3,
-                stagger: 0.04,
-                ease: 'power2.in'
-            }, 0)
-            .to(mobileMenu, {
-                opacity: 0,
-                duration: 0.25,
-                ease: 'power2.in'
-            }, 0.15);
-    }
+        // Mobile Menu
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileLinks = document.querySelectorAll('.mobile-menu-link');
+        const mobileBottom = document.querySelector('.mobile-menu-bottom');
+        let menuOpen = false;
+        let menuTimeline = null;
 
-    function toggleMobileMenu() {
-        menuOpen ? closeMobileMenu() : openMobileMenu();
-    }
+        function openMobileMenu() {
+            menuOpen = true;
+            mobileToggle.classList.add('active');
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
 
-    // Close menu when clicking a link
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => closeMobileMenu());
-    });
+            if (menuTimeline) menuTimeline.kill();
+            menuTimeline = gsap.timeline();
+            gsap.set(mobileMenu, { visibility: 'visible', opacity: 1 });
+            gsap.set(mobileLinks, { opacity: 0, y: 30 });
+            gsap.set(mobileBottom, { opacity: 0, y: 20 });
 
-    // Close menu on CTA click
-    document.querySelector('.mobile-menu-cta')?.addEventListener('click', () => closeMobileMenu());
-
-    // ============================================
-    // NAVIGATION SCROLL EFFECT
-    // ============================================
-    const nav = document.getElementById('mainNav');
-    let lastScroll = 0;
-
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        if (currentScroll > 50) {
-            nav.classList.add('scrolled');
-        } else {
-            nav.classList.remove('scrolled');
+            menuTimeline
+                .to(mobileLinks, { opacity: 1, y: 0, duration: 0.5, stagger: 0.07, ease: 'power3.out' }, 0.1)
+                .to(mobileBottom, { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 0.35);
         }
-        lastScroll = currentScroll;
-    }, { passive: true });
 
-    // ============================================
-    // FAQ TOGGLE
-    // ============================================
-    function toggleFaq(button) {
-        const item = button.parentElement;
-        const isActive = item.classList.contains('active');
-        
-        // Close all FAQ items
-        document.querySelectorAll('.faq-item').forEach(faqItem => {
-            faqItem.classList.remove('active');
-        });
-        
-        // Open current item if it wasn't active
-        if (!isActive) {
-            item.classList.add('active');
-        }
-    }
+        function closeMobileMenu() {
+            if (!menuOpen) return;
+            menuOpen = false;
+            mobileToggle.classList.remove('active');
 
-    // ============================================
-    // FORM SUBMISSION
-    // ============================================
-    function submitForm(event) {
-        event.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(event.target);
-        const data = Object.fromEntries(formData);
-        
-        // Show success message (in real implementation, send to server)
-        alert('Bedankt voor uw aanvraag! We nemen zo spoedig mogelijk contact met u op.');
-        
-        // Reset form
-        event.target.reset();
-    }
-
-    // ============================================
-    // GSAP ANIMATIONS
-    // ============================================
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Hero animations — staggered entrance
-    const heroTimeline = gsap.timeline({ delay: 1 });
-
-    // Set initial state for hero elements, then animate in
-    gsap.set('.hero-anim', { opacity: 0, y: 20 });
-    gsap.set('.hero-anim-right', { opacity: 0, x: 60 });
-    gsap.set('.hero-floating-card', { opacity: 0, y: 20, scale: 0.9 });
-
-    heroTimeline
-        .to('.hero-badge', {
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            ease: 'power3.out'
-        })
-        .to('.hero h1', {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: 'power3.out'
-        }, '-=0.3')
-        .to('.hero-text', {
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            ease: 'power3.out'
-        }, '-=0.4')
-        .to('.hero-actions', {
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            ease: 'power3.out'
-        }, '-=0.3')
-        .to('.hero-stats', {
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            ease: 'power3.out'
-        }, '-=0.2')
-        .to('.hero-visual', {
-            opacity: 1,
-            x: 0,
-            duration: 1,
-            ease: 'power3.out'
-        }, '-=0.8')
-        .to('.hero-floating-card', {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 0.6,
-            ease: 'back.out(1.7)'
-        }, '-=0.3');
-
-    // Scroll-triggered reveals
-    document.querySelectorAll('.reveal').forEach(el => {
-        gsap.to(el, {
-            scrollTrigger: {
-                trigger: el,
-                start: 'top 85%',
-                toggleActions: 'play none none none'
-            },
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: 'power3.out'
-        });
-    });
-
-    document.querySelectorAll('.reveal-left').forEach(el => {
-        gsap.to(el, {
-            scrollTrigger: {
-                trigger: el,
-                start: 'top 85%',
-                toggleActions: 'play none none none'
-            },
-            opacity: 1,
-            x: 0,
-            duration: 0.8,
-            ease: 'power3.out'
-        });
-    });
-
-    document.querySelectorAll('.reveal-right').forEach(el => {
-        // Skip hero visual — it's handled by the hero timeline
-        if (el.closest('.hero')) return;
-        gsap.to(el, {
-            scrollTrigger: {
-                trigger: el,
-                start: 'top 85%',
-                toggleActions: 'play none none none'
-            },
-            opacity: 1,
-            x: 0,
-            duration: 0.8,
-            ease: 'power3.out'
-        });
-    });
-
-    document.querySelectorAll('.reveal-scale').forEach(el => {
-        gsap.to(el, {
-            scrollTrigger: {
-                trigger: el,
-                start: 'top 85%',
-                toggleActions: 'play none none none'
-            },
-            opacity: 1,
-            scale: 1,
-            duration: 0.8,
-            ease: 'power3.out'
-        });
-    });
-
-    // Stagger service cards
-    gsap.utils.toArray('.service-card').forEach((card, i) => {
-        gsap.to(card, {
-            scrollTrigger: {
-                trigger: card,
-                start: 'top 85%',
-                toggleActions: 'play none none none'
-            },
-            opacity: 1,
-            y: 0,
-            duration: 0.7,
-            delay: i * 0.1,
-            ease: 'power3.out'
-        });
-    });
-
-    // Stagger review cards
-    gsap.utils.toArray('.review-card').forEach((card, i) => {
-        gsap.to(card, {
-            scrollTrigger: {
-                trigger: card,
-                start: 'top 85%',
-                toggleActions: 'play none none none'
-            },
-            opacity: 1,
-            y: 0,
-            duration: 0.7,
-            delay: i * 0.1,
-            ease: 'power3.out'
-        });
-    });
-
-    // Stagger FAQ items
-    gsap.utils.toArray('.faq-item').forEach((item, i) => {
-        gsap.to(item, {
-            scrollTrigger: {
-                trigger: item,
-                start: 'top 85%',
-                toggleActions: 'play none none none'
-            },
-            opacity: 1,
-            y: 0,
-            duration: 0.7,
-            delay: i * 0.05,
-            ease: 'power3.out'
-        });
-    });
-
-    // Parallax on hero shapes
-    gsap.to('.hero-shape-1', {
-        scrollTrigger: {
-            trigger: '.hero',
-            start: 'top top',
-            end: 'bottom top',
-            scrub: 1
-        },
-        y: -100,
-        ease: 'none'
-    });
-
-    gsap.to('.hero-shape-2', {
-        scrollTrigger: {
-            trigger: '.hero',
-            start: 'top top',
-            end: 'bottom top',
-            scrub: 1
-        },
-        y: -60,
-        ease: 'none'
-    });
-
-    // Number counter animation for hero stats
-    function animateCounter(element, target, suffix = '') {
-        const isDecimal = target.toString().includes('.');
-        gsap.to({ val: 0 }, {
-            val: parseFloat(target),
-            duration: 2,
-            ease: 'power2.out',
-            onUpdate: function() {
-                const current = this.targets()[0].val;
-                if (isDecimal) {
-                    element.textContent = current.toFixed(1) + suffix;
-                } else {
-                    element.textContent = Math.floor(current) + suffix;
+            if (menuTimeline) menuTimeline.kill();
+            menuTimeline = gsap.timeline({
+                onComplete: () => {
+                    mobileMenu.classList.remove('active');
+                    gsap.set(mobileMenu, { visibility: 'hidden', opacity: 0 });
+                    document.body.style.overflow = '';
                 }
+            });
+
+            menuTimeline
+                .to(mobileBottom, { opacity: 0, y: 10, duration: 0.25, ease: 'power2.in' })
+                .to(mobileLinks, { opacity: 0, y: -20, duration: 0.3, stagger: 0.04, ease: 'power2.in' }, 0)
+                .to(mobileMenu, { opacity: 0, duration: 0.25, ease: 'power2.in' }, 0.15);
+        }
+
+        function toggleMobileMenu() { menuOpen ? closeMobileMenu() : openMobileMenu(); }
+        mobileLinks.forEach(link => link.addEventListener('click', () => closeMobileMenu()));
+        document.querySelector('.mobile-menu-cta')?.addEventListener('click', () => closeMobileMenu());
+
+        // Navigation scroll
+        const nav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        }, { passive: true });
+
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero
+        gsap.set('.hero-anim', { opacity: 0, y: 20 });
+        gsap.set('.hero-anim-right', { opacity: 0, x: 60 });
+        gsap.set('.hero-floating-card', { opacity: 0, y: 20, scale: 0.9 });
+        gsap.set('.hero-floating-card-2', { opacity: 0, y: -20, scale: 0.9 });
+
+        const heroTl = gsap.timeline({ delay: 1 });
+        heroTl
+            .to('.hero-badge', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' })
+            .to('.hero h1', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.3')
+            .to('.hero-text', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4')
+            .to('.hero-actions', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.3')
+            .to('.hero-stats', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.2')
+            .to('.hero-visual', { opacity: 1, x: 0, duration: 1, ease: 'power3.out' }, '-=0.8')
+            .to('.hero-floating-card', { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'back.out(1.7)' }, '-=0.3')
+            .to('.hero-floating-card-2', { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'back.out(1.7)' }, '-=0.4');
+
+        // Scroll reveals
+        document.querySelectorAll('.reveal').forEach(el => {
+            gsap.to(el, {
+                scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+                opacity: 1, y: 0, duration: 0.8, ease: 'power3.out'
+            });
+        });
+
+        document.querySelectorAll('.reveal-left').forEach(el => {
+            gsap.to(el, {
+                scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+                opacity: 1, x: 0, duration: 0.8, ease: 'power3.out'
+            });
+        });
+
+        document.querySelectorAll('.reveal-right').forEach(el => {
+            if (el.closest('.hero')) return;
+            gsap.to(el, {
+                scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+                opacity: 1, x: 0, duration: 0.8, ease: 'power3.out'
+            });
+        });
+
+        // Stagger cards
+        gsap.utils.toArray('.service-card').forEach((card, i) => {
+            gsap.to(card, {
+                scrollTrigger: { trigger: card, start: 'top 85%', toggleActions: 'play none none none' },
+                opacity: 1, y: 0, duration: 0.7, delay: i * 0.08, ease: 'power3.out'
+            });
+        });
+
+        gsap.utils.toArray('.review-card').forEach((card, i) => {
+            gsap.to(card, {
+                scrollTrigger: { trigger: card, start: 'top 85%', toggleActions: 'play none none none' },
+                opacity: 1, y: 0, duration: 0.7, delay: i * 0.08, ease: 'power3.out'
+            });
+        });
+
+        gsap.utils.toArray('.why-card').forEach((card, i) => {
+            gsap.to(card, {
+                scrollTrigger: { trigger: card, start: 'top 85%', toggleActions: 'play none none none' },
+                opacity: 1, y: 0, duration: 0.7, delay: i * 0.08, ease: 'power3.out'
+            });
+        });
+
+        // Parallax
+        gsap.to('.hero-shape-1', {
+            scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 },
+            y: -100, ease: 'none'
+        });
+
+        gsap.to('.hero-shape-2', {
+            scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 },
+            y: -60, ease: 'none'
+        });
+
+        // Counter animation
+        function animateCounter(element, target, suffix = '') {
+            const isDecimal = target % 1 !== 0;
+            gsap.to({ val: 0 }, {
+                val: target, duration: 2, ease: 'power2.out',
+                onUpdate: function() {
+                    const current = this.targets()[0].val;
+                    element.textContent = isDecimal ? current.toFixed(1) + suffix : Math.floor(current).toLocaleString('nl-NL') + suffix;
+                }
+            });
+        }
+
+        setTimeout(() => {
+            const stats = document.querySelectorAll('.hero-stat-number');
+            if (stats[0]) animateCounter(stats[0], 6, '');
+            if (stats[1]) animateCounter(stats[1], 4.8, '');
+            if (stats[2]) animateCounter(stats[2], 1.5, '');
+        }, 1200);
+
+        ScrollTrigger.create({
+            trigger: '.why-bottom', start: 'top 85%', once: true,
+            onEnter: () => {
+                const ws = document.querySelectorAll('.why-stat-number');
+                if (ws[0]) animateCounter(ws[0], 6, '');
+                if (ws[1]) animateCounter(ws[1], 4.8, '');
+                if (ws[2]) animateCounter(ws[2], 5, '');
+                if (ws[3]) animateCounter(ws[3], 1.5, '');
             }
         });
-    }
 
-    // Animate hero stats on load
-    setTimeout(() => {
-        const stats = document.querySelectorAll('.hero-stat-number');
-        if (stats[0]) animateCounter(stats[0], 1.5, '+');
-        if (stats[1]) animateCounter(stats[1], 10, '+');
-        if (stats[2]) animateCounter(stats[2], 5, '⭐');
-    }, 1200);
-
-    // ============================================
-    // SMOOTH ANCHOR SCROLLING
-    // ============================================
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
-
-    // ============================================
-    // ACTIVE NAV LINK HIGHLIGHTING
-    // ============================================
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a:not(.btn)');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 120;
-            if (window.pageYOffset >= sectionTop) {
-                current = section.getAttribute('id');
-            }
+        // Smooth anchor
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+            });
         });
 
-        navLinks.forEach(link => {
-            link.style.color = '';
-            if (link.getAttribute('href') === '#' + current) {
-                link.style.color = 'var(--color-primary)';
+        // Active nav
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a:not(.btn)');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => { if (window.pageYOffset >= section.offsetTop - 120) current = section.getAttribute('id'); });
+            navLinks.forEach(link => {
+                link.style.color = '';
+                if (link.getAttribute('href') === '#' + current) link.style.color = 'var(--color-primary)';
+            });
+        }, { passive: true });
+
+        // FAQ Toggle
+        function toggleFaq(el) {
+            const item = el.closest('.faq-item');
+            const answer = item.querySelector('.faq-answer');
+            const isActive = item.classList.contains('active');
+
+            // Close all
+            document.querySelectorAll('.faq-item.active').forEach(faq => {
+                faq.classList.remove('active');
+                faq.querySelector('.faq-answer').style.maxHeight = '0';
+            });
+
+            if (!isActive) {
+                item.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
             }
-        });
-    }, { passive: true });
-</script>
+        }
+    </script>
 </body>
 </html>
