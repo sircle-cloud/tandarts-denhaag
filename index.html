@@ -588,38 +588,18 @@
             border-radius: var(--radius-xl);
             overflow: hidden;
             box-shadow: var(--shadow-xl);
-            background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-accent-light) 100%);
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
             height: 520px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            object-fit: cover;
         }
 
-        .hero-image-placeholder {
-            text-align: center;
-            padding: 60px;
-        }
-
-        .hero-image-placeholder .hero-icon-large {
-            font-size: 120px;
-            line-height: 1;
-            margin-bottom: 24px;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
-        }
-
-        .hero-image-placeholder p {
-            font-family: var(--font-heading);
-            font-size: 1.6rem;
-            color: var(--color-primary-dark);
-            font-weight: 600;
-        }
-
-        .hero-image-placeholder .hero-sub {
-            font-family: var(--font-body);
-            font-size: 0.95rem;
-            color: var(--color-text-secondary);
-            margin-top: 8px;
-            font-weight: 400;
+        .hero-image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(42, 122, 107, 0.1) 100%);
         }
 
         .hero-floating-card {
@@ -676,8 +656,8 @@
 
         .hero-floating-card-2 .stars {
             color: var(--color-accent);
-            font-size: 1rem;
-            letter-spacing: 2px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
         }
 
         .hero-floating-card-2 span {
@@ -709,29 +689,12 @@
             border-radius: var(--radius-xl);
             overflow: hidden;
             position: relative;
-            background: linear-gradient(135deg, var(--color-primary-light), var(--color-accent-light));
+        }
+
+        .about-image img {
+            width: 100%;
             height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .about-image-placeholder {
-            text-align: center;
-            padding: 40px;
-        }
-
-        .about-image-placeholder .icon-xl {
-            font-size: 100px;
-            line-height: 1;
-            margin-bottom: 16px;
-        }
-
-        .about-image-placeholder p {
-            font-family: var(--font-heading);
-            font-size: 1.3rem;
-            color: var(--color-primary-dark);
-            font-weight: 500;
+            object-fit: cover;
         }
 
         .about-content {
@@ -836,9 +799,10 @@
         }
 
         .kids-feature-icon {
-            font-size: 1.6rem;
             min-width: 40px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .kids-feature-text {
@@ -849,31 +813,16 @@
 
         .kids-visual {
             position: relative;
-            background: linear-gradient(135deg, #fff3cd, #fef3c7);
             border-radius: var(--radius-xl);
             height: 480px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            overflow: hidden;
             box-shadow: var(--shadow-lg);
         }
 
-        .kids-visual-content {
-            text-align: center;
-            padding: 40px;
-        }
-
-        .kids-visual-content .icon-xxl {
-            font-size: 140px;
-            line-height: 1;
-            margin-bottom: 16px;
-        }
-
-        .kids-visual-content p {
-            font-family: var(--font-heading);
-            font-size: 1.4rem;
-            color: var(--color-text);
-            font-weight: 500;
+        .kids-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* ============================================
@@ -1663,11 +1612,8 @@
 
                 <div class="hero-visual hero-anim-right">
                     <div class="hero-image-wrapper">
-                        <div class="hero-image-placeholder">
-                            <div class="hero-icon-large">🦷</div>
-                            <p>Tandarts Den Haag</p>
-                            <p class="hero-sub">Valkenbosplein 21</p>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=600&fit=crop&q=80" alt="Moderne tandartsenpraktijk Den Haag" loading="eager">
+                        <div class="hero-image-overlay"></div>
                     </div>
                     <div class="hero-floating-card">
                         <div class="hero-floating-icon">
@@ -1697,10 +1643,7 @@
 
             <div class="about-grid">
                 <div class="about-image reveal-left">
-                    <div class="about-image-placeholder">
-                        <div class="icon-xl">🏥</div>
-                        <p>Moderne praktijk</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=600&fit=crop&q=80" alt="Tandarts behandeling" loading="lazy">
                 </div>
                 <div class="about-content reveal-right">
                     <p>Bij Tandarts Den Haag geloven we in persoonlijke aandacht en zorg op maat. Of u nu komt voor een reguliere controle, een tandheelkundige behandeling of cosmetische ingrepen, ons team staat voor u klaar om u de best mogelijke zorg te bieden.</p>
@@ -1762,28 +1705,33 @@
 
                     <div class="kids-features">
                         <div class="kids-feature">
-                            <div class="kids-feature-icon">👶</div>
+                            <div class="kids-feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </div>
                             <div class="kids-feature-text">Kennismaking vanaf 1,5 jaar</div>
                         </div>
                         <div class="kids-feature">
-                            <div class="kids-feature-icon">🛡️</div>
+                            <div class="kids-feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
                             <div class="kids-feature-text">Veilige en vertrouwde omgeving</div>
                         </div>
                         <div class="kids-feature">
-                            <div class="kids-feature-icon">🎮</div>
+                            <div class="kids-feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                            </div>
                             <div class="kids-feature-text">Speelse en ongedwongen aanpak</div>
                         </div>
                         <div class="kids-feature">
-                            <div class="kids-feature-icon">📚</div>
+                            <div class="kids-feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            </div>
                             <div class="kids-feature-text">Leren over mondhygiëne op kindniveau</div>
                         </div>
                     </div>
                 </div>
                 <div class="kids-visual reveal-right">
-                    <div class="kids-visual-content">
-                        <div class="icon-xxl">👦🦷</div>
-                        <p>Gewoon Gaaf methode</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=600&fit=crop&q=80" alt="Kind bij de tandarts" loading="lazy">
                 </div>
             </div>
         </div>
@@ -1954,37 +1902,49 @@
 
             <div class="why-grid">
                 <div class="why-card reveal">
-                    <div class="why-card-icon">🏥</div>
+                    <div class="why-card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
                     <h3>Moderne apparatuur</h3>
                     <p>Wij gebruiken geavanceerde bewezen technologie voor nauwkeurigere diagnoses en comfortabelere behandelingen.</p>
                 </div>
 
                 <div class="why-card reveal">
-                    <div class="why-card-icon">❤️</div>
+                    <div class="why-card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </div>
                     <h3>Persoonlijke aandacht</h3>
                     <p>Geen lopende-bandwerk. Wij nemen de tijd voor elke patiënt en luisteren naar uw wensen en zorgen.</p>
                 </div>
 
                 <div class="why-card reveal">
-                    <div class="why-card-icon">👨‍👩‍👧‍👦</div>
+                    <div class="why-card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
                     <h3>Kindvriendelijk</h3>
                     <p>Gewoon Gaaf gecertificeerd. Kinderen zijn welkom vanaf 1,5 jaar in een veilige, speelse omgeving.</p>
                 </div>
 
                 <div class="why-card reveal">
-                    <div class="why-card-icon">⚡</div>
+                    <div class="why-card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
                     <h3>Spoedbehandelingen</h3>
                     <p>Tandheelkundige noodgevallen? Wij staan altijd klaar om u zo snel mogelijk te helpen, ook bij spoed.</p>
                 </div>
 
                 <div class="why-card reveal">
-                    <div class="why-card-icon">📍</div>
+                    <div class="why-card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
                     <h3>Centraal gelegen</h3>
                     <p>Op het Valkenbosplein, midden in Den Haag. Goed bereikbaar met OV en voldoende parkeergelegenheid.</p>
                 </div>
 
                 <div class="why-card reveal">
-                    <div class="why-card-icon">💰</div>
+                    <div class="why-card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    </div>
                     <h3>Transparante tarieven</h3>
                     <p>Geen verrassingen. Wij informeren u vooraf over kosten en werken met vaste NZa-tarieven.</p>
                 </div>
