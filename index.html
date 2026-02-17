@@ -3,2155 +3,1205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tandarts Den Haag — Een beter leven begint met een mooie glimlach</title>
-    <meta name="description" content="Tandarts Den Haag op het Valkenbosplein. Uw tandarts voor gebitscontrole, preventie, esthetische tandheelkunde en kindvriendelijke behandelingen.">
+    <title>Tandarts Den Haag — Valkenbosplein</title>
+    <meta name="description" content="Tandarts Den Haag op het Valkenbosplein. Persoonlijke tandheelkundige zorg voor het hele gezin.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* ============================================
-           CSS CUSTOM PROPERTIES
-           ============================================ */
         :root {
-            --color-primary: #0e7490;
-            --color-primary-light: #e0f7fa;
-            --color-primary-dark: #0a5568;
-            --color-accent: #e8913a;
-            --color-accent-light: #fef3e2;
-            --color-bg: #f8fafb;
-            --color-bg-alt: #eef3f5;
-            --color-surface: #ffffff;
-            --color-text: #1a2332;
-            --color-text-secondary: #4a5568;
-            --color-text-light: #8a95a5;
-            --color-border: #e2e8f0;
-            --font-heading: 'Playfair Display', Georgia, serif;
-            --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
-            --radius-sm: 8px;
-            --radius-md: 16px;
-            --radius-lg: 24px;
-            --radius-xl: 32px;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
-            --shadow-md: 0 4px 20px rgba(0,0,0,0.06);
-            --shadow-lg: 0 10px 40px rgba(0,0,0,0.08);
-            --shadow-xl: 0 20px 60px rgba(0,0,0,0.1);
-            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-smooth: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --navy: #1b2a4a;
+            --navy-light: #2d4170;
+            --sky: #4a90d9;
+            --sky-light: #eef4fb;
+            --warm: #c8553d;
+            --warm-light: #fdf0ed;
+            --cream: #faf8f5;
+            --sand: #f0ece6;
+            --white: #ffffff;
+            --text: #1b2a4a;
+            --text-mid: #4a5568;
+            --text-light: #94a3b8;
+            --border: #e2e8f0;
+            --heading: 'DM Serif Display', Georgia, serif;
+            --body: 'Inter', -apple-system, sans-serif;
         }
 
-        /* ============================================
-           RESET & BASE
-           ============================================ */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-        html, body {
-            scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            overflow-x: hidden;
-            width: 100%;
-            max-width: 100%;
-        }
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: var(--font-body);
+            font-family: var(--body);
             font-size: 16px;
             line-height: 1.7;
-            color: var(--color-text);
-            background-color: var(--color-bg);
-        }
-
-        .site-wrapper {
+            color: var(--text);
+            background: var(--cream);
+            -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
-            width: 100%;
-            max-width: 100%;
-            position: relative;
         }
 
-        img { max-width: 100%; height: auto; display: block; }
-        a { text-decoration: none; color: inherit; transition: color var(--transition-fast); }
+        a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
 
-        /* ============================================
-           TYPOGRAPHY
-           ============================================ */
-        h1, h2, h3, h4 {
-            font-family: var(--font-heading);
-            font-weight: 600;
-            line-height: 1.2;
-            letter-spacing: -0.02em;
-        }
-
-        h1 { font-size: clamp(2.8rem, 6vw, 5rem); }
-        h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
-        h3 { font-size: clamp(1.3rem, 2.5vw, 1.6rem); }
-
-        .section-label {
-            font-family: var(--font-body);
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--color-primary);
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .section-label::before {
-            content: '';
-            display: inline-block;
-            width: 32px;
-            height: 2px;
-            background: var(--color-primary);
-        }
-
-        .section-description {
-            font-size: clamp(1.05rem, 1.5vw, 1.2rem);
-            color: var(--color-text-secondary);
-            max-width: 560px;
-            line-height: 1.8;
-        }
-
-        /* ============================================
-           LAYOUT
-           ============================================ */
-        .container {
-            max-width: 1280px;
+        .wrap {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 clamp(24px, 5vw, 80px);
+            padding: 0 clamp(20px, 4vw, 60px);
         }
 
-        .section {
-            padding: clamp(80px, 12vw, 160px) 0;
-            overflow-x: hidden;
-        }
-
-        /* ============================================
-           BUTTONS
-           ============================================ */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 16px 36px;
-            font-family: var(--font-body);
-            font-size: 0.9rem;
-            font-weight: 600;
-            letter-spacing: 0.02em;
-            border: none;
-            border-radius: 100px;
-            cursor: pointer;
-            transition: all var(--transition-base);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary {
-            background: var(--color-primary);
-            color: #fff;
-            box-shadow: 0 4px 20px rgba(14, 116, 144, 0.3);
-        }
-
-        .btn-primary:hover {
-            background: var(--color-primary-dark);
-            box-shadow: 0 6px 30px rgba(14, 116, 144, 0.4);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--color-text);
-            border: 1.5px solid var(--color-border);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--color-primary);
-            color: var(--color-primary);
-            transform: translateY(-2px);
-        }
-
-        .btn-white {
-            background: #fff;
-            color: var(--color-primary);
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn-white:hover {
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-2px);
-        }
-
-        .btn svg {
-            width: 16px;
-            height: 16px;
-            transition: transform var(--transition-base);
-        }
-
-        .btn:hover svg { transform: translateX(3px); }
-
-        /* ============================================
-           NAVIGATION
-           ============================================ */
-        .nav {
+        /* ====== NAV ====== */
+        .topbar {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 20px 0;
-            transition: all var(--transition-base);
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            padding: 16px 0;
+            transition: all 0.3s ease;
         }
 
-        .nav.scrolled {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            padding: 12px 0;
-            box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+        .topbar.stuck {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(16px);
+            box-shadow: 0 1px 0 var(--border);
+            padding: 10px 0;
         }
 
-        .nav-inner {
+        .topbar-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
-        .nav-logo {
-            font-family: var(--font-heading);
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--color-text);
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .logo {
+            font-family: var(--heading);
+            font-size: 1.4rem;
+            color: var(--navy);
         }
 
-        .nav-logo-icon {
-            width: 36px;
-            height: 36px;
-            background: var(--color-primary);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 1rem;
+        .logo span {
+            color: var(--warm);
         }
 
-        .nav-links {
+        .nav-list {
             display: flex;
             align-items: center;
-            gap: 36px;
+            gap: 32px;
         }
 
-        .nav-links a {
-            font-size: 0.88rem;
+        .nav-list a {
+            font-size: 0.85rem;
             font-weight: 500;
-            color: var(--color-text-secondary);
-            position: relative;
-            padding: 4px 0;
+            color: var(--text-mid);
+            transition: color 0.2s;
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 1.5px;
-            background: var(--color-primary);
-            transition: width var(--transition-base);
-        }
+        .nav-list a:hover { color: var(--navy); }
 
-        .nav-links a:hover { color: var(--color-primary); }
-        .nav-links a:hover::after { width: 100%; }
-
-        .nav-cta {
-            padding: 10px 24px !important;
-            font-size: 0.85rem !important;
+        .nav-btn {
+            padding: 10px 24px;
+            background: var(--navy);
             color: #fff !important;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.2s;
         }
 
-        .nav-cta:hover { color: #fff !important; }
-        .nav-cta::after { display: none !important; }
+        .nav-btn:hover {
+            background: var(--navy-light);
+            transform: translateY(-1px);
+        }
 
-        .nav-mobile-toggle {
+        .burger {
             display: none;
             background: none;
             border: none;
             cursor: pointer;
-            padding: 8px;
-            width: 44px;
-            height: 44px;
+            width: 40px;
+            height: 40px;
             position: relative;
-            z-index: 1002;
         }
 
-        .nav-mobile-toggle span {
+        .burger span {
             display: block;
-            width: 22px;
-            height: 1.5px;
-            background: var(--color-text);
-            border-radius: 2px;
+            width: 20px;
+            height: 2px;
+            background: var(--navy);
             position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            left: 10px;
+            transition: all 0.3s;
         }
 
-        .nav-mobile-toggle span:nth-child(1) { top: 14px; }
-        .nav-mobile-toggle span:nth-child(2) { top: 21px; }
-        .nav-mobile-toggle span:nth-child(3) { top: 28px; }
+        .burger span:nth-child(1) { top: 12px; }
+        .burger span:nth-child(2) { top: 19px; }
+        .burger span:nth-child(3) { top: 26px; }
 
-        .nav-mobile-toggle.active span:nth-child(1) {
-            top: 21px;
-            transform: translateX(-50%) rotate(45deg);
-        }
+        .burger.open span:nth-child(1) { top: 19px; transform: rotate(45deg); }
+        .burger.open span:nth-child(2) { opacity: 0; }
+        .burger.open span:nth-child(3) { top: 19px; transform: rotate(-45deg); }
 
-        .nav-mobile-toggle.active span:nth-child(2) {
-            opacity: 0;
-            transform: translateX(-50%) scaleX(0);
-        }
-
-        .nav-mobile-toggle.active span:nth-child(3) {
-            top: 21px;
-            transform: translateX(-50%) rotate(-45deg);
-        }
-
-        /* Fullscreen mobile menu */
-        .mobile-menu-close {
-            position: absolute;
-            top: 24px;
-            right: 24px;
-            z-index: 1002;
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: var(--color-text);
-            padding: 8px;
-            transition: transform var(--transition-fast), opacity var(--transition-fast);
-        }
-
-        .mobile-menu-close:hover {
-            transform: rotate(90deg);
-            opacity: 0.6;
-        }
-
-        .mobile-menu {
+        .mobile-nav {
             position: fixed;
             inset: 0;
-            z-index: 1001;
-            background: var(--color-bg);
+            background: var(--cream);
+            z-index: 99;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            visibility: hidden;
+            gap: 32px;
             opacity: 0;
             pointer-events: none;
+            transition: opacity 0.3s;
         }
 
-        .mobile-menu.active {
-            visibility: visible;
-            opacity: 1;
-            pointer-events: all;
+        .mobile-nav.open { opacity: 1; pointer-events: all; }
+
+        .mobile-nav a {
+            font-family: var(--heading);
+            font-size: 2rem;
+            color: var(--navy);
         }
 
-        .mobile-menu-inner {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 48px;
-            width: 100%;
-            padding: 0 32px;
-        }
-
-        .mobile-menu-nav {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .mobile-menu-link {
-            font-family: var(--font-heading);
-            font-size: 2.4rem;
-            font-weight: 500;
-            color: var(--color-text);
-            padding: 8px 0;
-            position: relative;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .mobile-menu-link::after {
-            content: '';
-            position: absolute;
-            bottom: 4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--color-primary);
-            transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .mobile-menu-link:hover { color: var(--color-primary); }
-        .mobile-menu-link:hover::after { width: 100%; }
-
-        .mobile-menu-bottom {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 24px;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        .mobile-menu-cta {
-            min-width: 220px;
-            justify-content: center;
-            min-height: 52px;
-        }
-
-        .mobile-menu-contact {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .mobile-menu-contact a {
-            font-size: 0.88rem;
-            color: var(--color-text-secondary);
-            transition: color var(--transition-fast);
-        }
-
-        .mobile-menu-contact a:hover { color: var(--color-primary); }
-
-        /* ============================================
-           HERO SECTION
-           ============================================ */
+        /* ====== HERO — split layout ====== */
         .hero {
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(165deg, #fff 0%, #f0f9fb 50%, var(--color-primary-light) 100%);
-        }
-
-        .hero-bg-shapes {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            overflow: hidden;
-        }
-
-        .hero-shape {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.08;
-        }
-
-        .hero-shape-1 {
-            width: 600px;
-            height: 600px;
-            background: var(--color-primary);
-            top: -200px;
-            right: -100px;
-            animation: float-1 20s ease-in-out infinite;
-        }
-
-        .hero-shape-2 {
-            width: 400px;
-            height: 400px;
-            background: var(--color-accent);
-            bottom: -100px;
-            left: -100px;
-            animation: float-2 25s ease-in-out infinite;
-        }
-
-        .hero-shape-3 {
-            width: 200px;
-            height: 200px;
-            background: var(--color-primary);
-            top: 40%;
-            right: 30%;
-            animation: float-3 15s ease-in-out infinite;
-        }
-
-        @keyframes float-1 {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(30px, 20px) scale(1.05); }
-            66% { transform: translate(-20px, -10px) scale(0.95); }
-        }
-
-        @keyframes float-2 {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            50% { transform: translate(40px, -30px) rotate(10deg); }
-        }
-
-        @keyframes float-3 {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(-30px, 20px); }
-        }
-
-        .hero-inner {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: clamp(40px, 6vw, 100px);
-            align-items: center;
-            padding: 120px 0 80px;
+            overflow: hidden;
         }
 
-        .hero-content { position: relative; z-index: 2; }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 20px;
-            background: var(--color-surface);
-            border: 1px solid var(--color-border);
-            border-radius: 100px;
-            font-size: 0.82rem;
-            font-weight: 500;
-            color: var(--color-text-secondary);
-            margin-bottom: 32px;
-            box-shadow: var(--shadow-sm);
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: clamp(100px, 12vh, 160px) clamp(32px, 6vw, 80px) clamp(60px, 8vh, 100px);
+            background: var(--cream);
         }
 
-        .hero-badge-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--color-primary);
-            border-radius: 50%;
-            animation: pulse-dot 2s ease-in-out infinite;
+        .hero-tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--warm);
+            margin-bottom: 24px;
         }
 
-        @keyframes pulse-dot {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.3); }
+        .hero-left h1 {
+            font-family: var(--heading);
+            font-size: clamp(2.6rem, 5vw, 4.2rem);
+            line-height: 1.15;
+            color: var(--navy);
+            margin-bottom: 24px;
+            font-weight: 400;
         }
 
-        .hero h1 { margin-bottom: 24px; color: var(--color-text); }
-        .hero h1 em { font-style: italic; color: var(--color-primary); }
-
-        .hero-text {
-            font-size: clamp(1.05rem, 1.5vw, 1.15rem);
-            color: var(--color-text-secondary);
+        .hero-left p {
+            font-size: 1.05rem;
+            color: var(--text-mid);
+            max-width: 440px;
             margin-bottom: 40px;
-            max-width: 480px;
             line-height: 1.8;
         }
 
-        .hero-actions {
+        .hero-btns {
             display: flex;
-            align-items: center;
-            gap: 16px;
+            gap: 12px;
             flex-wrap: wrap;
         }
 
-        .hero-stats {
-            display: flex;
-            gap: 40px;
-            margin-top: 64px;
-            padding-top: 40px;
-            border-top: 1px solid var(--color-border);
+        .btn-solid {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            background: var(--navy);
+            color: #fff;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s;
         }
 
-        .hero-stat-number {
-            font-family: var(--font-heading);
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            line-height: 1;
+        .btn-solid:hover {
+            background: var(--navy-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(27,42,74,0.2);
         }
 
-        .hero-stat-label {
-            font-size: 0.82rem;
-            color: var(--color-text-light);
-            margin-top: 6px;
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            background: transparent;
+            color: var(--navy);
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.25s;
         }
 
-        .hero-visual { position: relative; z-index: 2; }
+        .btn-outline:hover {
+            border-color: var(--navy);
+            transform: translateY(-2px);
+        }
 
-        .hero-image-wrapper {
+        .hero-right {
             position: relative;
-            border-radius: var(--radius-xl);
             overflow: hidden;
-            box-shadow: var(--shadow-xl);
         }
 
-        .hero-image-wrapper img {
+        .hero-right img {
             width: 100%;
-            height: 520px;
+            height: 100%;
             object-fit: cover;
         }
 
-        .hero-image-overlay {
+        .hero-right::after {
+            content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, transparent 60%, rgba(42, 122, 107, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(27,42,74,0.15), transparent 60%);
         }
 
-        .hero-floating-card {
+        .hero-badge {
             position: absolute;
-            bottom: -24px;
-            left: -24px;
-            background: var(--color-surface);
-            border-radius: var(--radius-md);
-            padding: 20px 24px;
-            box-shadow: var(--shadow-lg);
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            z-index: 3;
-        }
-
-        .hero-floating-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--color-primary-light);
+            bottom: 40px;
+            left: 40px;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(8px);
+            padding: 16px 24px;
             border-radius: 12px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: var(--color-primary);
-            font-size: 1.3rem;
-        }
-
-        .hero-floating-text strong {
-            display: block;
-            font-size: 0.9rem;
-            color: var(--color-text);
-        }
-
-        .hero-floating-text span {
-            font-size: 0.8rem;
-            color: var(--color-text-light);
-        }
-
-        /* Second floating card - top right */
-        .hero-floating-card-2 {
-            position: absolute;
-            top: 24px;
-            right: -16px;
-            background: var(--color-surface);
-            border-radius: var(--radius-md);
-            padding: 16px 20px;
-            box-shadow: var(--shadow-lg);
-            display: flex;
-            align-items: center;
             gap: 12px;
-            z-index: 3;
+            z-index: 2;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
         }
 
-        .hero-floating-card-2 .stars {
-            color: var(--color-accent);
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-        }
-
-        .hero-floating-card-2 span {
-            font-size: 0.82rem;
-            font-weight: 600;
-            color: var(--color-text);
-        }
-
-        /* ============================================
-           ABOUT SECTION
-           ============================================ */
-        .about { background: var(--color-surface); }
-
-        .about-header {
-            max-width: 640px;
-            margin-bottom: 80px;
-        }
-
-        .about-header h2 { margin-bottom: 20px; }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .about-image {
-            border-radius: var(--radius-xl);
-            overflow: hidden;
-            position: relative;
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-        }
-
-        .about-content {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-        }
-
-        .about-content p {
-            color: var(--color-text-secondary);
-            font-size: 1.05rem;
-            line-height: 1.85;
-        }
-
-        .about-values {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 16px;
-        }
-
-        .about-value {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-        }
-
-        .about-value-icon {
-            width: 40px;
-            height: 40px;
-            min-width: 40px;
-            background: var(--color-primary-light);
+        .hero-badge-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--sky-light);
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--color-primary);
-            font-size: 1.1rem;
         }
 
-        .about-value-text h4 {
-            font-family: var(--font-body);
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 2px;
+        .hero-badge strong {
+            display: block;
+            font-size: 0.85rem;
         }
 
-        .about-value-text p {
-            font-size: 0.82rem !important;
-            color: var(--color-text-light) !important;
-            line-height: 1.5 !important;
+        .hero-badge span {
+            font-size: 0.78rem;
+            color: var(--text-light);
         }
 
-        /* ============================================
-           KIDS SECTION
-           ============================================ */
-        .kids {
-            background: #f0f9fb;
-            position: relative;
+        /* ====== TICKER ====== */
+        .ticker {
+            background: var(--navy);
+            color: rgba(255,255,255,0.85);
+            padding: 14px 0;
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
             overflow: hidden;
         }
 
-        .kids-inner {
+        .ticker-inner {
+            display: flex;
+            gap: 48px;
+            animation: scroll-ticker 20s linear infinite;
+            white-space: nowrap;
+            width: max-content;
+        }
+
+        .ticker-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ticker-dot {
+            width: 5px;
+            height: 5px;
+            background: var(--warm);
+            border-radius: 50%;
+        }
+
+        @keyframes scroll-ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ====== SECTION STYLES ====== */
+        .sec {
+            padding: clamp(80px, 12vw, 140px) 0;
+        }
+
+        .sec-header {
+            margin-bottom: 64px;
+        }
+
+        .sec-tag {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--warm);
+            margin-bottom: 12px;
+        }
+
+        .sec-header h2 {
+            font-family: var(--heading);
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            font-weight: 400;
+            color: var(--navy);
+            line-height: 1.2;
+        }
+
+        .sec-header p {
+            margin-top: 16px;
+            color: var(--text-mid);
+            max-width: 520px;
+            font-size: 1rem;
+        }
+
+        /* ====== ABOUT — horizontal split ====== */
+        .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
+            grid-template-columns: 5fr 6fr;
+            gap: 64px;
             align-items: center;
         }
 
-        .kids-content h2 {
+        .about-img {
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .about-img img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+        }
+
+        .about-text p {
+            color: var(--text-mid);
+            font-size: 1rem;
+            line-height: 1.85;
             margin-bottom: 20px;
         }
 
-        .kids-content p {
-            color: var(--color-text-secondary);
-            font-size: 1.05rem;
-            line-height: 1.85;
-            margin-bottom: 16px;
-        }
-
-        .kids-features {
+        .about-pills {
             display: flex;
-            flex-direction: column;
-            gap: 16px;
+            flex-wrap: wrap;
+            gap: 10px;
             margin-top: 32px;
         }
 
-        .kids-feature {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 16px 20px;
-            background: var(--color-surface);
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
-            transition: all var(--transition-base);
-        }
-
-        .kids-feature:hover {
-            box-shadow: var(--shadow-md);
-            transform: translateX(8px);
-        }
-
-        .kids-feature-icon {
-            min-width: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .kids-feature-text {
-            font-size: 0.92rem;
+        .about-pill {
+            padding: 10px 20px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            font-size: 0.82rem;
             font-weight: 500;
-            color: var(--color-text);
+            color: var(--navy);
+            transition: all 0.2s;
         }
 
-        .kids-visual {
+        .about-pill:hover {
+            border-color: var(--navy);
+            background: var(--navy);
+            color: #fff;
+        }
+
+        /* ====== SERVICES — card grid ====== */
+        .services-bg { background: var(--white); }
+
+        .svc-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .svc-card {
+            padding: 36px 32px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            transition: all 0.3s;
             position: relative;
-            border-radius: var(--radius-xl);
-            height: 480px;
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
         }
 
-        .kids-visual img {
+        .svc-card:hover {
+            border-color: var(--navy);
+            box-shadow: 0 12px 40px rgba(27,42,74,0.08);
+            transform: translateY(-4px);
+        }
+
+        .svc-num {
+            font-family: var(--heading);
+            font-size: 2.4rem;
+            color: var(--sand);
+            line-height: 1;
+            margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+
+        .svc-card:hover .svc-num { color: var(--warm); }
+
+        .svc-card h3 {
+            font-family: var(--heading);
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+
+        .svc-card p {
+            font-size: 0.88rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+        }
+
+        /* ====== KIDS — full-width with image bg ====== */
+        .kids-sec {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kids-bg {
+            position: absolute;
+            inset: 0;
+        }
+
+        .kids-bg img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        /* ============================================
-           SERVICES SECTION
-           ============================================ */
-        .services {
-            background: var(--color-bg);
-            position: relative;
-        }
-
-        .services-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 64px;
-            gap: 40px;
-        }
-
-        .services-header-left {
-            max-width: 560px;
-        }
-
-        .services-header-left h2 { margin-bottom: 16px; }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .service-card {
-            background: var(--color-surface);
-            border-radius: var(--radius-lg);
-            padding: clamp(32px, 4vw, 48px);
-            transition: all var(--transition-base);
-            border: 1px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
+        .kids-bg::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-            opacity: 0;
-            transition: opacity var(--transition-base);
+            inset: 0;
+            background: linear-gradient(90deg, var(--navy) 50%, rgba(27,42,74,0.7) 100%);
         }
 
-        .service-card:hover {
-            border-color: var(--color-border);
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-4px);
-        }
-
-        .service-card:hover::before { opacity: 1; }
-
-        .service-icon {
-            width: 56px;
-            height: 56px;
-            background: var(--color-primary-light);
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 24px;
-            transition: all var(--transition-base);
-        }
-
-        .service-card:hover .service-icon {
-            background: var(--color-primary);
-            color: #fff;
-        }
-
-        .service-card h3 { margin-bottom: 12px; }
-
-        .service-card p {
-            font-size: 0.92rem;
-            color: var(--color-text-secondary);
-            line-height: 1.7;
-        }
-
-        /* ============================================
-           REVIEWS SECTION
-           ============================================ */
-        .reviews {
-            background: var(--color-surface);
-        }
-
-        .reviews-header {
-            text-align: center;
-            max-width: 640px;
-            margin: 0 auto 64px;
-        }
-
-        .reviews-header h2 { margin-bottom: 16px; }
-
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-        }
-
-        .review-card {
-            background: var(--color-bg);
-            border-radius: var(--radius-lg);
-            padding: 36px;
-            transition: all var(--transition-base);
+        .kids-content {
             position: relative;
+            z-index: 2;
+            max-width: 540px;
+            color: #fff;
+            padding: clamp(80px, 12vw, 140px) 0;
         }
 
-        .review-card:hover {
-            box-shadow: var(--shadow-md);
-            transform: translateY(-4px);
-        }
+        .kids-content .sec-tag { color: var(--warm); }
 
-        .review-stars {
-            color: var(--color-accent);
-            font-size: 1rem;
-            letter-spacing: 3px;
+        .kids-content h2 {
+            font-family: var(--heading);
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            font-weight: 400;
+            color: #fff;
             margin-bottom: 20px;
         }
 
-        .review-text {
-            font-size: 0.95rem;
-            color: var(--color-text-secondary);
-            line-height: 1.75;
-            font-style: italic;
-            margin-bottom: 24px;
+        .kids-content p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1rem;
+            line-height: 1.85;
+            margin-bottom: 16px;
         }
 
-        .review-author {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .review-avatar {
-            width: 44px;
-            height: 44px;
-            background: var(--color-primary-light);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: var(--color-primary);
-            font-size: 0.9rem;
-        }
-
-        .review-author-info strong {
-            display: block;
-            font-size: 0.88rem;
-            color: var(--color-text);
-        }
-
-        .review-author-info span {
-            font-size: 0.78rem;
-            color: var(--color-text-light);
-        }
-
-        .review-quote {
-            position: absolute;
-            top: 20px;
-            right: 24px;
-            font-size: 3rem;
-            color: var(--color-primary);
-            opacity: 0.1;
-            font-family: var(--font-heading);
-            line-height: 1;
-        }
-
-        /* ============================================
-           WHY CHOOSE US
-           ============================================ */
-        .why {
-            background: var(--color-primary);
-            color: #fff;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .why-bg-pattern {
-            position: absolute;
-            inset: 0;
-            opacity: 0.05;
-            background-image: radial-gradient(circle at 1px 1px, #fff 1px, transparent 0);
-            background-size: 40px 40px;
-        }
-
-        .why .container { position: relative; z-index: 2; }
-
-        .why-header {
-            text-align: center;
-            max-width: 640px;
-            margin: 0 auto 80px;
-        }
-
-        .why-header .section-label { color: var(--color-accent); }
-        .why-header .section-label::before { background: var(--color-accent); }
-        .why-header h2 { color: #fff; margin-bottom: 16px; }
-
-        .why-header p {
-            color: rgba(255,255,255,0.7);
-            font-size: 1.05rem;
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-
-        .why-card {
-            background: rgba(255,255,255,0.08);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.12);
-            border-radius: var(--radius-lg);
-            padding: 40px;
-            transition: all var(--transition-base);
-        }
-
-        .why-card:hover {
-            background: rgba(255,255,255,0.12);
-            transform: translateY(-6px);
-        }
-
-        .why-card-icon {
-            width: 52px;
-            height: 52px;
-            background: rgba(255,255,255,0.12);
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.4rem;
-            margin-bottom: 24px;
-        }
-
-        .why-card h3 { font-size: 1.2rem; margin-bottom: 12px; color: #fff; }
-
-        .why-card p {
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.65);
-            line-height: 1.7;
-        }
-
-        .why-bottom {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 32px;
-            margin-top: 64px;
-            padding-top: 48px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .why-stat { text-align: center; }
-
-        .why-stat-number {
-            font-family: var(--font-heading);
-            font-size: 2.6rem;
-            font-weight: 700;
-            color: var(--color-accent);
-        }
-
-        .why-stat-label {
-            font-size: 0.82rem;
-            color: rgba(255,255,255,0.6);
-            margin-top: 4px;
-        }
-
-        .why-stat-divider {
-            width: 1px;
-            height: 60px;
-            background: rgba(255,255,255,0.12);
-        }
-
-        /* ============================================
-           FAQ SECTION
-           ============================================ */
-        .faq { background: var(--color-bg); }
-
-        .faq-header {
-            text-align: center;
-            max-width: 640px;
-            margin: 0 auto 64px;
-        }
-
-        .faq-header h2 { margin-bottom: 16px; }
-
-        .faq-list {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid var(--color-border);
-            overflow: hidden;
-        }
-
-        .faq-item:first-child { border-top: 1px solid var(--color-border); }
-
-        .faq-question {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 24px 0;
-            cursor: pointer;
-            gap: 16px;
-            transition: color var(--transition-fast);
-        }
-
-        .faq-question:hover { color: var(--color-primary); }
-
-        .faq-question h3 {
-            font-family: var(--font-body);
-            font-size: 1.05rem;
-            font-weight: 600;
-            letter-spacing: 0;
-        }
-
-        .faq-toggle {
-            width: 32px;
-            height: 32px;
-            min-width: 32px;
-            background: var(--color-primary-light);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all var(--transition-base);
-        }
-
-        .faq-toggle svg {
-            width: 14px;
-            height: 14px;
-            color: var(--color-primary);
-            transition: transform var(--transition-base);
-        }
-
-        .faq-item.active .faq-toggle {
-            background: var(--color-primary);
-        }
-
-        .faq-item.active .faq-toggle svg {
-            color: #fff;
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .faq-answer-inner {
-            padding: 0 0 24px;
-            font-size: 0.95rem;
-            color: var(--color-text-secondary);
-            line-height: 1.8;
-        }
-
-        /* ============================================
-           CONTACT SECTION
-           ============================================ */
-        .contact { background: var(--color-surface); }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: start;
-        }
-
-        .contact-left h2 { margin-bottom: 16px; }
-        .contact-left .section-description { margin-bottom: 48px; }
-
-        .contact-info-list {
-            display: flex;
-            flex-direction: column;
-            gap: 28px;
-        }
-
-        .contact-info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-        }
-
-        .contact-info-icon {
-            width: 48px;
-            height: 48px;
-            min-width: 48px;
-            background: var(--color-primary-light);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-primary);
-            font-size: 1.2rem;
-        }
-
-        .contact-info-text h4 {
-            font-family: var(--font-body);
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .contact-info-text p {
-            font-size: 0.88rem;
-            color: var(--color-text-secondary);
-            line-height: 1.6;
-        }
-
-        .contact-info-text a {
-            color: var(--color-primary);
-            font-weight: 500;
-        }
-
-        .contact-info-text a:hover { color: var(--color-primary-dark); }
-
-        .contact-right { position: relative; }
-
-        .contact-hours-card {
-            background: var(--color-bg);
-            border-radius: var(--radius-lg);
-            padding: 40px;
-        }
-
-        .contact-hours-card h3 { margin-bottom: 24px; font-size: 1.3rem; }
-
-        .hours-list {
+        .kids-list {
+            margin-top: 32px;
             display: flex;
             flex-direction: column;
             gap: 14px;
         }
 
-        .hours-item {
+        .kids-list-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.92rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .kids-list-item svg {
+            width: 18px;
+            height: 18px;
+            color: var(--warm);
+            flex-shrink: 0;
+        }
+
+        /* ====== REVIEWS — horizontal scroll ====== */
+        .reviews-bg { background: var(--cream); }
+
+        .reviews-track {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 8px;
+        }
+
+        .reviews-track::-webkit-scrollbar { display: none; }
+
+        .rev-card {
+            min-width: 360px;
+            max-width: 400px;
+            flex-shrink: 0;
+            scroll-snap-align: start;
+            background: var(--white);
+            border-radius: 16px;
+            padding: 36px;
+            border: 1px solid var(--border);
+        }
+
+        .rev-stars {
+            color: var(--warm);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .rev-text {
+            font-size: 0.95rem;
+            color: var(--text-mid);
+            line-height: 1.75;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .rev-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .rev-avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--sky-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--sky);
+        }
+
+        .rev-name { font-weight: 600; font-size: 0.88rem; }
+        .rev-src { font-size: 0.75rem; color: var(--text-light); }
+
+        /* ====== FAQ ====== */
+        .faq-bg { background: var(--white); }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-q {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 14px;
-            border-bottom: 1px solid var(--color-border);
+            padding: 22px 0;
+            cursor: pointer;
+            gap: 16px;
         }
 
-        .hours-item:last-child { border-bottom: none; padding-bottom: 0; }
-        .hours-day { font-weight: 500; font-size: 0.9rem; }
-        .hours-time { font-size: 0.88rem; color: var(--color-text-secondary); }
-        .hours-time.closed { color: var(--color-text-light); }
-
-        .contact-cta {
-            margin-top: 32px;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-            border-radius: var(--radius-lg);
-            padding: 40px;
-            color: #fff;
-            text-align: center;
+        .faq-q h3 {
+            font-family: var(--body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--navy);
         }
 
-        .contact-cta h3 { color: #fff; margin-bottom: 12px; }
+        .faq-q:hover h3 { color: var(--warm); }
 
-        .contact-cta p {
-            color: rgba(255,255,255,0.75);
-            font-size: 0.92rem;
-            margin-bottom: 24px;
+        .faq-arrow {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            transition: transform 0.3s;
         }
 
-        /* ============================================
-           MAP SECTION
-           ============================================ */
-        .map-section {
-            height: 400px;
-            position: relative;
-            background: var(--color-bg-alt);
+        .faq-item.open .faq-arrow { transform: rotate(180deg); }
+
+        .faq-a {
+            max-height: 0;
             overflow: hidden;
+            transition: max-height 0.4s ease;
         }
 
-        .map-section iframe {
+        .faq-a-inner {
+            padding-bottom: 22px;
+            font-size: 0.9rem;
+            color: var(--text-mid);
+            line-height: 1.8;
+        }
+
+        /* ====== CONTACT — two-col ====== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .contact-block {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 28px;
+        }
+
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            background: var(--sky-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-icon svg {
+            width: 18px;
+            height: 18px;
+            color: var(--sky);
+        }
+
+        .contact-block h4 {
+            font-size: 0.88rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .contact-block p, .contact-block a {
+            font-size: 0.88rem;
+            color: var(--text-mid);
+            line-height: 1.6;
+        }
+
+        .contact-block a:hover { color: var(--navy); }
+
+        .hours-table {
+            width: 100%;
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.88rem;
+        }
+
+        .hours-row:last-child { border-bottom: none; }
+        .hours-day { font-weight: 500; }
+        .hours-val { color: var(--text-mid); }
+        .hours-val.off { color: var(--text-light); }
+
+        .spoed-card {
+            margin-top: 32px;
+            background: var(--warm-light);
+            border: 1px solid rgba(200,85,61,0.15);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .spoed-card h4 {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--warm);
+            margin-bottom: 8px;
+        }
+
+        .spoed-card p {
+            font-size: 0.85rem;
+            color: var(--text-mid);
+        }
+
+        .spoed-card a {
+            color: var(--warm);
+            font-weight: 600;
+        }
+
+        /* ====== MAP ====== */
+        .map { height: 360px; }
+
+        .map iframe {
             width: 100%;
             height: 100%;
             border: none;
-            filter: saturate(0.8) contrast(1.1);
+            filter: saturate(0.7) contrast(1.05);
         }
 
-        /* ============================================
-           FOOTER
-           ============================================ */
-        .footer {
-            background: var(--color-bg);
-            color: var(--color-text-light);
+        /* ====== FOOTER ====== */
+        .foot {
+            background: var(--navy);
+            color: rgba(255,255,255,0.6);
             padding: 48px 0 32px;
-            border-top: 1px solid var(--color-border);
         }
 
-        .footer-inner {
+        .foot-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 24px;
             flex-wrap: wrap;
+            gap: 20px;
         }
 
-        .footer-logo {
-            font-family: var(--font-heading);
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--color-text);
+        .foot-logo {
+            font-family: var(--heading);
+            font-size: 1.2rem;
+            color: #fff;
         }
 
-        .footer-links { display: flex; gap: 28px; }
+        .foot-logo span { color: var(--warm); }
 
-        .footer-links a {
-            font-size: 0.82rem;
-            color: var(--color-text-light);
-            transition: color var(--transition-fast);
+        .foot-links { display: flex; gap: 24px; }
+
+        .foot-links a {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+            transition: color 0.2s;
         }
 
-        .footer-links a:hover { color: var(--color-primary); }
+        .foot-links a:hover { color: #fff; }
 
-        .footer-copy {
-            font-size: 0.78rem;
+        .foot-copy {
             width: 100%;
             text-align: center;
+            font-size: 0.75rem;
             margin-top: 32px;
             padding-top: 20px;
-            border-top: 1px solid var(--color-border);
+            border-top: 1px solid rgba(255,255,255,0.08);
         }
 
-        /* ============================================
-           SIRCLE BANNER
-           ============================================ */
-        .sircle-banner {
-            background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
-            color: #fff;
-            padding: 48px 0;
+        /* ====== SIRCLE STRIP ====== */
+        .sircle-strip {
+            background: #0a0a0a;
+            padding: 16px 0;
             text-align: center;
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.5);
         }
 
-        .sircle-banner-inner {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 24px;
-            flex-wrap: wrap;
-        }
-
-        .sircle-banner p {
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.7);
-        }
-
-        .sircle-banner a {
-            color: var(--color-accent);
+        .sircle-strip a {
+            color: var(--warm);
             font-weight: 600;
-            transition: color var(--transition-fast);
         }
 
-        .sircle-banner a:hover {
-            color: #fff;
-        }
+        .sircle-strip a:hover { color: #fff; }
 
-        /* ============================================
-           SCROLL REVEAL DEFAULTS
-           ============================================ */
-        .reveal { opacity: 0; transform: translateY(40px); }
-        .reveal-left { opacity: 0; transform: translateX(-40px); }
-        .reveal-right { opacity: 0; transform: translateX(40px); }
-        .reveal-scale { opacity: 0; transform: scale(0.95); }
-        .hero-anim { opacity: 1; transform: none; }
-        .hero-anim-right { opacity: 1; transform: none; }
+        /* ====== ANIMATIONS ====== */
+        .anim { opacity: 0; transform: translateY(32px); transition: all 0.7s cubic-bezier(0.16,1,0.3,1); }
+        .anim.vis { opacity: 1; transform: none; }
+        .anim-left { opacity: 0; transform: translateX(-32px); transition: all 0.7s cubic-bezier(0.16,1,0.3,1); }
+        .anim-left.vis { opacity: 1; transform: none; }
+        .anim-right { opacity: 0; transform: translateX(32px); transition: all 0.7s cubic-bezier(0.16,1,0.3,1); }
+        .anim-right.vis { opacity: 1; transform: none; }
 
-        /* ============================================
-           RESPONSIVE
-           ============================================ */
+        /* ====== RESPONSIVE ====== */
         @media (max-width: 1024px) {
-            .hero-inner {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 48px;
-            }
-
-            .hero-content { max-width: 600px; margin: 0 auto; }
-            .hero-text { margin-left: auto; margin-right: auto; }
-            .hero-actions { justify-content: center; }
-            .hero-stats { justify-content: center; }
-            .hero-visual { max-width: 500px; margin: 0 auto; }
-
-            .about-grid { grid-template-columns: 1fr; gap: 48px; }
-            .about-image { max-height: 400px; }
-
-            .kids-inner { grid-template-columns: 1fr; gap: 48px; }
-            .kids-visual { max-height: 380px; }
-
-            .services-header { flex-direction: column; align-items: flex-start; }
-            .services-grid { grid-template-columns: repeat(2, 1fr); }
-
-            .reviews-grid { grid-template-columns: repeat(2, 1fr); }
-
-            .why-grid { grid-template-columns: repeat(2, 1fr); }
-
-            .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+            .hero { grid-template-columns: 1fr; }
+            .hero-right { height: 50vh; min-height: 360px; }
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .about-img img { height: 360px; }
+            .svc-grid { grid-template-columns: repeat(2, 1fr); }
+            .faq-grid { grid-template-columns: 1fr; gap: 32px; }
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
         }
 
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .nav-mobile-toggle { display: block; }
-            .hero-inner { padding: 100px 0 60px; }
-            .hero-image-wrapper { height: 360px; }
-            .hero-stats { gap: 24px; }
-            .hero-floating-card { bottom: -16px; left: -8px; padding: 14px 18px; }
-            .hero-floating-card-2 { top: 16px; right: -8px; padding: 12px 16px; }
-
-            .services-grid { grid-template-columns: 1fr; }
-            .reviews-grid { grid-template-columns: 1fr; }
-            .why-grid { grid-template-columns: 1fr; }
-            .why-card { padding: 28px; }
-
-            .why-bottom { flex-wrap: wrap; gap: 24px; }
-            .why-stat-divider { display: none; }
-
-            .about-image { height: 300px; }
-            .kids-visual { height: 320px; }
-
-            .contact-hours-card { padding: 28px; }
-            .contact-cta { padding: 28px; }
-
-            .footer-inner { flex-direction: column; text-align: center; }
-            .footer-links { flex-wrap: wrap; justify-content: center; }
-            .map-section { height: 280px; }
+            .nav-list { display: none; }
+            .burger { display: block; }
+            .svc-grid { grid-template-columns: 1fr; }
+            .rev-card { min-width: 300px; }
+            .hero-badge { bottom: 20px; left: 20px; padding: 12px 18px; }
+            .kids-content { max-width: none; }
         }
 
         @media (max-width: 480px) {
-            .hero-stats { flex-direction: column; gap: 20px; align-items: center; }
-            .about-values { grid-template-columns: 1fr; }
-            .hero-badge { font-size: 0.75rem; padding: 6px 16px; }
-            .hero-inner { padding: 90px 0 48px; }
-            .hero-image-wrapper { height: 280px; }
-
-            .btn { padding: 14px 28px; font-size: 0.88rem; min-height: 48px; }
-            .btn-primary { width: 100%; justify-content: center; }
-            .hero-actions { flex-direction: column; width: 100%; }
-            .hero-actions .btn-secondary { width: 100%; justify-content: center; }
-            .section { padding: clamp(56px, 10vw, 160px) 0; }
-            .mobile-menu-link { font-size: 2rem; }
+            .hero-btns { flex-direction: column; }
+            .hero-btns .btn-solid, .hero-btns .btn-outline { width: 100%; justify-content: center; }
+            .hero-right { height: 40vh; min-height: 280px; }
         }
 
-        ::selection { background: var(--color-primary); color: #fff; }
         section[id] { scroll-margin-top: 80px; }
-
-        /* ============================================
-           LOADING ANIMATION
-           ============================================ */
-        .page-loader {
-            position: fixed;
-            inset: 0;
-            background: #fff;
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
-        }
-
-        .page-loader.loaded { opacity: 0; visibility: hidden; }
-
-        .loader-logo {
-            font-family: var(--font-heading);
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: var(--color-primary);
-            opacity: 0;
-            animation: loader-fade 1s ease-out forwards;
-        }
-
-        @keyframes loader-fade {
-            0% { opacity: 0; transform: translateY(10px); }
-            50% { opacity: 1; transform: translateY(0); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
+        ::selection { background: var(--navy); color: #fff; }
     </style>
 </head>
 <body>
-<div class="site-wrapper">
 
-    <!-- Page Loader -->
-    <div class="page-loader" id="pageLoader">
-        <div class="loader-logo">Tandarts Den Haag</div>
+    <!-- Mobile nav overlay -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#home" onclick="closeMob()">Home</a>
+        <a href="#over-ons" onclick="closeMob()">Over ons</a>
+        <a href="#behandelingen" onclick="closeMob()">Behandelingen</a>
+        <a href="#kinderen" onclick="closeMob()">Kinderen</a>
+        <a href="#reviews" onclick="closeMob()">Reviews</a>
+        <a href="#contact" onclick="closeMob()">Contact</a>
     </div>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Sluit menu">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
-        <div class="mobile-menu-inner">
-            <nav class="mobile-menu-nav">
-                <a href="#home" class="mobile-menu-link">Home</a>
-                <a href="#over-ons" class="mobile-menu-link">Over ons</a>
-                <a href="#kinderen" class="mobile-menu-link">Kinderen</a>
-                <a href="#behandelingen" class="mobile-menu-link">Behandelingen</a>
-                <a href="#reviews" class="mobile-menu-link">Reviews</a>
-                <a href="#contact" class="mobile-menu-link">Contact</a>
-            </nav>
-            <div class="mobile-menu-bottom">
-                <a href="tel:+31703228438" class="btn btn-primary mobile-menu-cta">Afspraak maken</a>
-                <div class="mobile-menu-contact">
-                    <a href="tel:+31703228438">📞 070 322 8438</a>
-                    <a href="mailto:info@tandartsdenhaag.nl">✉️ info@tandartsdenhaag.nl</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="nav" id="mainNav">
-        <div class="container">
-            <div class="nav-inner">
-                <a href="#home" class="nav-logo">
-                    <div class="nav-logo-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 4 6 4 10c0 3 1.5 5.5 4 7.5L12 22l4-4.5c2.5-2 4-4.5 4-7.5 0-4-4-8-8-8z"/><path d="M12 2c-1 3-1 6 0 8s1 5 0 8"/></svg>
-                    </div>
-                    Tandarts Den Haag
-                </a>
-
-                <div class="nav-links">
-                    <a href="#behandelingen">Behandelingen</a>
+    <!-- Topbar -->
+    <header class="topbar" id="topbar">
+        <div class="wrap">
+            <div class="topbar-inner">
+                <a href="#home" class="logo">Tandarts <span>Den Haag</span></a>
+                <nav class="nav-list">
                     <a href="#over-ons">Over ons</a>
+                    <a href="#behandelingen">Behandelingen</a>
                     <a href="#kinderen">Kinderen</a>
                     <a href="#reviews">Reviews</a>
                     <a href="#contact">Contact</a>
-                    <a href="#contact" class="btn btn-primary nav-cta">Afspraak maken</a>
-                </div>
-
-                <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu" onclick="toggleMobileMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <a href="#contact" class="nav-btn">Afspraak maken</a>
+                </nav>
+                <button class="burger" id="burger" onclick="toggleMob()">
+                    <span></span><span></span><span></span>
                 </button>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero section" id="home">
-        <div class="hero-bg-shapes">
-            <div class="hero-shape hero-shape-1"></div>
-            <div class="hero-shape hero-shape-2"></div>
-            <div class="hero-shape hero-shape-3"></div>
+    <!-- Hero — split screen -->
+    <section class="hero" id="home">
+        <div class="hero-left">
+            <div class="hero-tag">Valkenbosplein 21 — Den Haag</div>
+            <h1>Een beter leven begint met een mooie glimlach.</h1>
+            <p>Met persoonlijke aandacht en de nieuwste technologie zorgen wij voor de gezondheid van uw gebit. Voor het hele gezin, vanaf 1,5 jaar.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn-solid">Afspraak maken</a>
+                <a href="#behandelingen" class="btn-outline">Bekijk behandelingen</a>
+            </div>
         </div>
-        <div class="container">
-            <div class="hero-inner">
-                <div class="hero-content">
-                    <div class="hero-badge hero-anim">
-                        <span class="hero-badge-dot"></span>
-                        Valkenbosplein, Den Haag
-                    </div>
-                    <h1 class="hero-anim">Een beter leven begint met een <em>mooie glimlach</em></h1>
-                    <p class="hero-text hero-anim">Uw vertrouwde tandarts voor gebitscontrole, preventie, esthetische tandheelkunde en kindvriendelijke behandelingen. Met persoonlijke aandacht en de nieuwste technologie.</p>
-                    <div class="hero-actions hero-anim">
-                        <a href="#contact" class="btn btn-primary">
-                            Afspraak maken
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </a>
-                        <a href="#behandelingen" class="btn btn-secondary">Onze behandelingen</a>
-                    </div>
-                    <div class="hero-stats hero-anim">
-                        <div class="hero-stat">
-                            <div class="hero-stat-number">6</div>
-                            <div class="hero-stat-label">Behandelingen</div>
-                        </div>
-                        <div class="hero-stat">
-                            <div class="hero-stat-number">4.8</div>
-                            <div class="hero-stat-label">Google Reviews</div>
-                        </div>
-                        <div class="hero-stat">
-                            <div class="hero-stat-number">1.5</div>
-                            <div class="hero-stat-label">Jaar — kinderen welkom</div>
-                        </div>
-                    </div>
+        <div class="hero-right">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1000&h=1200&fit=crop&q=80" alt="Tandarts Den Haag interieur">
+            <div class="hero-badge">
+                <div class="hero-badge-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4a90d9" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                 </div>
-
-                <div class="hero-visual hero-anim-right">
-                    <div class="hero-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=520&fit=crop&q=80" alt="Moderne tandartsenpraktijk Den Haag" loading="eager">
-                        <div class="hero-image-overlay"></div>
-                    </div>
-                    <div class="hero-floating-card">
-                        <div class="hero-floating-icon">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        </div>
-                        <div class="hero-floating-text">
-                            <strong>Gewoon Gaaf</strong>
-                            <span>Kindvriendelijke praktijk</span>
-                        </div>
-                    </div>
-                    <div class="hero-floating-card-2">
-                        <div class="stars">★★★★★</div>
-                        <span>Uitstekend beoordeeld</span>
-                    </div>
+                <div>
+                    <strong>Gewoon Gaaf</strong>
+                    <span>Kindvriendelijke praktijk</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about section" id="over-ons">
-        <div class="container">
-            <div class="about-header reveal">
-                <div class="section-label">Over ons</div>
-                <h2>Uw tandarts op het Valkenbosplein</h2>
-            </div>
+    <!-- Ticker -->
+    <div class="ticker">
+        <div class="ticker-inner">
+            <div class="ticker-item"><div class="ticker-dot"></div>Gebitscontrole</div>
+            <div class="ticker-item"><div class="ticker-dot"></div>Preventie</div>
+            <div class="ticker-item"><div class="ticker-dot"></div>Cosmetische tandheelkunde</div>
+            <div class="ticker-item"><div class="ticker-dot"></div>Wortelkanaalbehandeling</div>
+            <div class="ticker-item"><div class="ticker-dot"></div>Vullingen</div>
+            <div class="ticker-item"><div class="ticker-dot"></div>Parodontitis</div>
+            <div class="ticker-item"><div class="ticker-dot"></div>Kindertandheelkunde</div>
+            <div class="ticker-item"><div class="ticker-dot"></div>Röntgenfoto's</div>
+            <div class="ticker-item"><div class="ticker-dot"></div>Extracties</div>
+            <div class="ticker-item"><div class="ticker-dot"></div>Spoedbehandeling</div>
+            <!-- duplicate for seamless loop -->
+            <div class="ticker-item"><div class="ticker-dot"></div>Gebitscontrole</div>
+            <div class="ticker-item"><div class="ticker-dot"></div>Preventie</div>
+            <div class="ticker-item"><div class="ticker-dot"></div>Cosmetische tandheelkunde</div>
+            <div class="ticker-item"><div class="ticker-dot"></div>Wortelkanaalbehandeling</div>
+            <div class="ticker-item"><div class="ticker-dot"></div>Vullingen</div>
+            <div class="ticker-item"><div class="ticker-dot"></div>Parodontitis</div>
+            <div class="ticker-item"><div class="ticker-dot"></div>Kindertandheelkunde</div>
+            <div class="ticker-item"><div class="ticker-dot"></div>Röntgenfoto's</div>
+            <div class="ticker-item"><div class="ticker-dot"></div>Extracties</div>
+            <div class="ticker-item"><div class="ticker-dot"></div>Spoedbehandeling</div>
+        </div>
+    </div>
 
+    <!-- About -->
+    <section class="sec" id="over-ons">
+        <div class="wrap">
             <div class="about-grid">
-                <div class="about-image reveal-left">
-                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=500&fit=crop&q=80" alt="Tandarts behandeling" loading="lazy">
+                <div class="about-img anim-left">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=600&fit=crop&q=80" alt="Tandarts aan het werk">
                 </div>
-                <div class="about-content reveal-right">
-                    <p>Bij Tandarts Den Haag geloven we in persoonlijke aandacht en zorg op maat. Of u nu komt voor een reguliere controle, een tandheelkundige behandeling of cosmetische ingrepen, ons team staat voor u klaar om u de best mogelijke zorg te bieden.</p>
-                    <p>We begrijpen dat een bezoek aan de tandarts soms gepaard gaat met zorgen, daarom streven we ernaar om een ontspannen en geruststellende sfeer te creëren. Met ons vaste team proberen wij uw tandartsbezoek zo aangenaam mogelijk te maken.</p>
-                    <p>Wanneer u voor het eerst bij ons in de stoel plaatsneemt zullen wij uw gebit controleren met behulp van röntgenfoto's. Vervolgens stellen wij een behandelplan voor u op zodat u precies weet wat u kunt verwachten.</p>
-
-                    <div class="about-values">
-                        <div class="about-value">
-                            <div class="about-value-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                            </div>
-                            <div class="about-value-text">
-                                <h4>Persoonlijke zorg</h4>
-                                <p>Zorg op maat voor elke patiënt</p>
-                            </div>
-                        </div>
-                        <div class="about-value">
-                            <div class="about-value-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                            </div>
-                            <div class="about-value-text">
-                                <h4>Moderne technologie</h4>
-                                <p>Geavanceerde apparatuur</p>
-                            </div>
-                        </div>
-                        <div class="about-value">
-                            <div class="about-value-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                            </div>
-                            <div class="about-value-text">
-                                <h4>Vast team</h4>
-                                <p>Vertrouwde gezichten</p>
-                            </div>
-                        </div>
-                        <div class="about-value">
-                            <div class="about-value-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            </div>
-                            <div class="about-value-text">
-                                <h4>Valkenbosplein</h4>
-                                <p>Centraal in Den Haag</p>
-                            </div>
-                        </div>
+                <div class="about-text anim-right">
+                    <div class="sec-tag">Over Tandarts Den Haag</div>
+                    <h2 style="font-family:var(--heading);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:400;color:var(--navy);margin-bottom:24px;">Persoonlijke zorg voor het hele gezin</h2>
+                    <p>Bij Tandarts Den Haag geloven we in persoonlijke aandacht en zorg op maat. Of u nu komt voor een reguliere controle, een tandheelkundige behandeling of cosmetische ingrepen — ons team staat voor u klaar.</p>
+                    <p>We begrijpen dat een bezoek aan de tandarts soms gepaard gaat met zorgen. Daarom streven we ernaar een ontspannen en geruststellende sfeer te creëren. Met ons vaste team maken wij uw tandartsbezoek zo aangenaam mogelijk.</p>
+                    <div class="about-pills">
+                        <div class="about-pill">Persoonlijke aandacht</div>
+                        <div class="about-pill">Moderne apparatuur</div>
+                        <div class="about-pill">Vast team</div>
+                        <div class="about-pill">Kindvriendelijk</div>
+                        <div class="about-pill">NZa tarieven</div>
+                        <div class="about-pill">Spoedzorg</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Kids Section -->
-    <section class="kids section" id="kinderen">
-        <div class="container">
-            <div class="kids-inner">
-                <div class="kids-content reveal-left">
-                    <div class="section-label">Kindvriendelijk</div>
-                    <h2>Gewoon Gaaf — speciaal voor kinderen</h2>
-                    <p>Onze praktijk is zeer kindvriendelijk. Wij werken middels de Gewoon Gaaf methode, waarbij wij streven naar een veilige omgeving waarin kinderen op een goede en fijne manier kennis kunnen maken met de tandarts.</p>
-                    <p>Wij brengen kinderen graag het belang van een gezonde mond bij en leren ze om goed om te gaan met hun tanden en kiezen.</p>
-
-                    <div class="kids-features">
-                        <div class="kids-feature">
-                            <div class="kids-feature-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                            </div>
-                            <div class="kids-feature-text">Kennismaking vanaf 1,5 jaar</div>
-                        </div>
-                        <div class="kids-feature">
-                            <div class="kids-feature-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                            </div>
-                            <div class="kids-feature-text">Veilige en vertrouwde omgeving</div>
-                        </div>
-                        <div class="kids-feature">
-                            <div class="kids-feature-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-                            </div>
-                            <div class="kids-feature-text">Speelse en ongedwongen aanpak</div>
-                        </div>
-                        <div class="kids-feature">
-                            <div class="kids-feature-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            </div>
-                            <div class="kids-feature-text">Leren over mondhygiëne op kindniveau</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="kids-visual reveal-right">
-                    <img src="https://images.unsplash.com/photo-1588776813677-77aaf5595b83?w=800&h=480&fit=crop&q=80" alt="Kind bij de tandarts" loading="lazy">
-                </div>
+    <!-- Services -->
+    <section class="sec services-bg" id="behandelingen">
+        <div class="wrap">
+            <div class="sec-header anim">
+                <div class="sec-tag">Behandelingen</div>
+                <h2>Ons complete aanbod</h2>
+                <p>Van preventieve zorg tot cosmetische behandelingen — wij bieden alles onder één dak.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services section" id="behandelingen">
-        <div class="container">
-            <div class="services-header">
-                <div class="services-header-left reveal">
-                    <div class="section-label">Behandelingen</div>
-                    <h2>Onze tandheelkundige diensten</h2>
-                    <p class="section-description">Van preventieve zorg tot cosmetische behandelingen — wij bieden een compleet scala aan tandheelkundige diensten.</p>
-                </div>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
+            <div class="svc-grid">
+                <div class="svc-card anim">
+                    <div class="svc-num">01</div>
                     <h3>Wortelkanaalbehandeling</h3>
                     <p>Red uw tand met een wortelkanaalbehandeling voor pijnverlichting en behoud van uw natuurlijke gebit.</p>
                 </div>
-
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
-                    </div>
+                <div class="svc-card anim">
+                    <div class="svc-num">02</div>
                     <h3>Extracties</h3>
-                    <p>Professionele oplossingen voor problematische tanden. Wij bevorderen het welzijn van uw gebit met zorgvuldige extracties.</p>
+                    <p>Professionele oplossingen voor problematische tanden die het welzijn van uw gebit bevorderen.</p>
                 </div>
-
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                    </div>
+                <div class="svc-card anim">
+                    <div class="svc-num">03</div>
                     <h3>Röntgenfoto's</h3>
-                    <p>Stralend inzicht in uw mondgezondheid met geavanceerde digitale röntgenfoto's voor nauwkeurige diagnoses.</p>
+                    <p>Geavanceerde digitale röntgenfoto's voor nauwkeurige diagnoses en inzicht in uw mondgezondheid.</p>
                 </div>
-
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    </div>
+                <div class="svc-card anim">
+                    <div class="svc-num">04</div>
                     <h3>Cosmetische tandheelkunde</h3>
-                    <p>Verbeter uw glimlach met professionele cosmetische behandelingen. Whitening, facings en meer.</p>
+                    <p>Verbeter uw glimlach met professionele cosmetische behandelingen, whitening en facings.</p>
                 </div>
-
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    </div>
+                <div class="svc-card anim">
+                    <div class="svc-num">05</div>
                     <h3>Vullingen</h3>
                     <p>Herstel uw gebit met duurzame vullingen voor behoud en comfort. Wij gebruiken de nieuwste materialen.</p>
                 </div>
-
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                    </div>
-                    <h3>Parodontitis behandeling</h3>
-                    <p>Behandel parodontitis voor een gezond tandvlees. Preventie en behandeling voor langdurige mondgezondheid.</p>
+                <div class="svc-card anim">
+                    <div class="svc-num">06</div>
+                    <h3>Parodontitis</h3>
+                    <p>Behandel parodontitis voor gezond tandvlees. Preventie en behandeling voor langdurige mondgezondheid.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Reviews Section -->
-    <section class="reviews section" id="reviews">
-        <div class="container">
-            <div class="reviews-header">
-                <div class="section-label reveal" style="justify-content: center;">Reviews</div>
-                <h2 class="reveal">Wat onze patiënten zeggen</h2>
-            </div>
-
-            <div class="reviews-grid">
-                <div class="review-card reveal">
-                    <div class="review-quote">"</div>
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">Vanochtend had ik een kies gebroken. Ik kon vanmiddag al terecht. De behandeling was prima en verrassend snel. De receptionist was zeer vriendelijk en attent, ook de tandarts. De prijs was goed.</p>
-                    <div class="review-author">
-                        <div class="review-avatar">P</div>
-                        <div class="review-author-info">
-                            <strong>Patiënt</strong>
-                            <span>Google Review</span>
-                        </div>
+    <!-- Kids — cinematic section -->
+    <section class="kids-sec" id="kinderen">
+        <div class="kids-bg">
+            <img src="https://images.unsplash.com/photo-1588776813677-77aaf5595b83?w=1400&h=800&fit=crop&q=80" alt="Kind bij de tandarts">
+        </div>
+        <div class="wrap">
+            <div class="kids-content anim">
+                <div class="sec-tag">Kindvriendelijk</div>
+                <h2>Gewoon Gaaf — speciaal voor kinderen</h2>
+                <p>Onze praktijk werkt met de Gewoon Gaaf methode. Wij streven naar een veilige omgeving waarin kinderen op een fijne manier kennis maken met de tandarts.</p>
+                <p>Kinderen zijn welkom vanaf 1,5 jaar. We leren ze het belang van een gezonde mond op een speelse, ongedwongen manier.</p>
+                <div class="kids-list">
+                    <div class="kids-list-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        Kennismaking vanaf 1,5 jaar
                     </div>
-                </div>
-
-                <div class="review-card reveal">
-                    <div class="review-quote">"</div>
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">Aardige medewerkers, vriendelijk en klantgericht. Hulpvaardig en flexibel bij het maken van afspraken. Moderne praktijk met no nonsense tandheelkunde.</p>
-                    <div class="review-author">
-                        <div class="review-avatar">M</div>
-                        <div class="review-author-info">
-                            <strong>M. de Vries</strong>
-                            <span>Google Review</span>
-                        </div>
+                    <div class="kids-list-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        Veilige en vertrouwde omgeving
                     </div>
-                </div>
-
-                <div class="review-card reveal">
-                    <div class="review-quote">"</div>
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">Net als vele anderen ben ik niet echt een fan van de tandarts, maar in deze praktijk weten ze me iedere keer weer gerust te stellen en rustig te maken. De angst is echt enorm verminderd!</p>
-                    <div class="review-author">
-                        <div class="review-avatar">S</div>
-                        <div class="review-author-info">
-                            <strong>S. Bakker</strong>
-                            <span>Google Review</span>
-                        </div>
+                    <div class="kids-list-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        Speelse, ongedwongen aanpak
                     </div>
-                </div>
-
-                <div class="review-card reveal">
-                    <div class="review-quote">"</div>
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">Heel prettig geholpen, ook voor de kids zijn ze erg geduldig. Fijn dat ik voor mijn vervolg afspraak een bevestigingsmail kreeg inclusief kosten plaatje.</p>
-                    <div class="review-author">
-                        <div class="review-avatar">J</div>
-                        <div class="review-author-info">
-                            <strong>J. van Dijk</strong>
-                            <span>Google Review</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="review-card reveal">
-                    <div class="review-quote">"</div>
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">Fijne praktijk, zeer aardig personeel dat goed meedenkt en behulpzaam is. Kom al jaren bij deze tandarts en heb er zelfs een aardig reistijd voor over!</p>
-                    <div class="review-author">
-                        <div class="review-avatar">K</div>
-                        <div class="review-author-info">
-                            <strong>K. Jansen</strong>
-                            <span>Google Review</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="review-card reveal">
-                    <div class="review-quote">"</div>
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">Moderne praktijk met een warm team. Ze nemen echt de tijd om alles uit te leggen. Mijn kinderen gaan zelfs met plezier naar de tandarts!</p>
-                    <div class="review-author">
-                        <div class="review-avatar">L</div>
-                        <div class="review-author-info">
-                            <strong>L. Mulder</strong>
-                            <span>Google Review</span>
-                        </div>
+                    <div class="kids-list-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        Mondhygiëne op kindniveau
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="why section" id="waarom-wij">
-        <div class="why-bg-pattern"></div>
-        <div class="container">
-            <div class="why-header">
-                <div class="section-label reveal" style="justify-content: center;">Waarom wij</div>
-                <h2 class="reveal">Waarom patiënten kiezen voor Tandarts Den Haag</h2>
-                <p class="reveal">Wij geloven dat een bezoek aan de tandarts geen stress hoeft op te leveren. Daarom doen wij alles voor uw comfort en welzijn.</p>
-            </div>
-
-            <div class="why-grid">
-                <div class="why-card reveal">
-                    <div class="why-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                    </div>
-                    <h3>Moderne apparatuur</h3>
-                    <p>Wij gebruiken geavanceerde bewezen technologie voor nauwkeurigere diagnoses en comfortabelere behandelingen.</p>
-                </div>
-
-                <div class="why-card reveal">
-                    <div class="why-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                    </div>
-                    <h3>Persoonlijke aandacht</h3>
-                    <p>Geen lopende-bandwerk. Wij nemen de tijd voor elke patiënt en luisteren naar uw wensen en zorgen.</p>
-                </div>
-
-                <div class="why-card reveal">
-                    <div class="why-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    </div>
-                    <h3>Kindvriendelijk</h3>
-                    <p>Gewoon Gaaf gecertificeerd. Kinderen zijn welkom vanaf 1,5 jaar in een veilige, speelse omgeving.</p>
-                </div>
-
-                <div class="why-card reveal">
-                    <div class="why-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    </div>
-                    <h3>Spoedbehandelingen</h3>
-                    <p>Tandheelkundige noodgevallen? Wij staan altijd klaar om u zo snel mogelijk te helpen, ook bij spoed.</p>
-                </div>
-
-                <div class="why-card reveal">
-                    <div class="why-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    </div>
-                    <h3>Centraal gelegen</h3>
-                    <p>Op het Valkenbosplein, midden in Den Haag. Goed bereikbaar met OV en voldoende parkeergelegenheid.</p>
-                </div>
-
-                <div class="why-card reveal">
-                    <div class="why-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                    </div>
-                    <h3>Transparante tarieven</h3>
-                    <p>Geen verrassingen. Wij informeren u vooraf over kosten en werken met vaste NZa-tarieven.</p>
-                </div>
-            </div>
-
-            <div class="why-bottom reveal">
-                <div class="why-stat">
-                    <div class="why-stat-number">6</div>
-                    <div class="why-stat-label">Behandelingen</div>
-                </div>
-                <div class="why-stat-divider"></div>
-                <div class="why-stat">
-                    <div class="why-stat-number">4.8</div>
-                    <div class="why-stat-label">Google Score</div>
-                </div>
-                <div class="why-stat-divider"></div>
-                <div class="why-stat">
-                    <div class="why-stat-number">5</div>
-                    <div class="why-stat-label">Dagen per week</div>
-                </div>
-                <div class="why-stat-divider"></div>
-                <div class="why-stat">
-                    <div class="why-stat-number">1.5</div>
-                    <div class="why-stat-label">Jaar — kinderen welkom</div>
-                </div>
+    <!-- Reviews — horizontal scroll -->
+    <section class="sec reviews-bg" id="reviews">
+        <div class="wrap">
+            <div class="sec-header anim">
+                <div class="sec-tag">Reviews</div>
+                <h2>Wat patiënten zeggen</h2>
             </div>
         </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq section" id="faq">
-        <div class="container">
-            <div class="faq-header">
-                <div class="section-label reveal" style="justify-content: center;">Veelgestelde vragen</div>
-                <h2 class="reveal">Alles wat u wilt weten</h2>
-            </div>
-
-            <div class="faq-list">
-                <div class="faq-item reveal">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>Hoe kan ik een afspraak maken?</h3>
-                        <div class="faq-toggle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">U kunt een afspraak maken via de mail (info@tandartsdenhaag.nl), telefonisch (070 322 8438) of aan de receptie. Wij proberen u zo snel mogelijk in te plannen.</div>
+        <div class="wrap">
+            <div class="reviews-track">
+                <div class="rev-card">
+                    <div class="rev-stars">★ ★ ★ ★ ★</div>
+                    <p class="rev-text">"Vanochtend had ik een kies gebroken. Ik kon vanmiddag al terecht. De behandeling was prima en verrassend snel. De receptionist was zeer vriendelijk en attent."</p>
+                    <div class="rev-author">
+                        <div class="rev-avatar">P</div>
+                        <div><div class="rev-name">Patiënt</div><div class="rev-src">Google Reviews</div></div>
                     </div>
                 </div>
-
-                <div class="faq-item reveal">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>Welk nummer bel ik bij spoedgevallen?</h3>
-                        <div class="faq-toggle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">Voor spoed belt u 070 – 204 00 10. Ons team staat klaar om u bij tandheelkundige noodgevallen zo snel mogelijk te helpen.</div>
+                <div class="rev-card">
+                    <div class="rev-stars">★ ★ ★ ★ ★</div>
+                    <p class="rev-text">"Aardige medewerkers, vriendelijk en klantgericht. Hulpvaardig en flexibel bij het maken van afspraken. Moderne praktijk met no nonsense tandheelkunde."</p>
+                    <div class="rev-author">
+                        <div class="rev-avatar">M</div>
+                        <div><div class="rev-name">M. de Vries</div><div class="rev-src">Google Reviews</div></div>
                     </div>
                 </div>
-
-                <div class="faq-item reveal">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>Worden mijn behandelingen vergoed?</h3>
-                        <div class="faq-toggle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">Dit verschilt per zorgverzekeraar en polis. Voor de juiste vergoeding neemt u contact op met uw zorgverzekeraar. Wij werken met de vaste NZa-tarieven.</div>
+                <div class="rev-card">
+                    <div class="rev-stars">★ ★ ★ ★ ★</div>
+                    <p class="rev-text">"Ik ben niet echt een fan van de tandarts, maar in deze praktijk weten ze me iedere keer gerust te stellen. De angst is echt enorm verminderd!"</p>
+                    <div class="rev-author">
+                        <div class="rev-avatar">S</div>
+                        <div><div class="rev-name">S. Bakker</div><div class="rev-src">Google Reviews</div></div>
                     </div>
                 </div>
-
-                <div class="faq-item reveal">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>Kan ik mijn afspraak verzetten?</h3>
-                        <div class="faq-toggle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">Ja, afspraken dienen uiterlijk 48 uur van te voren afgezegd te worden. Bel of mail ons om uw afspraak te verzetten. Bij te late afzegging zijn wij genoodzaakt een consult in rekening te brengen.</div>
+                <div class="rev-card">
+                    <div class="rev-stars">★ ★ ★ ★ ★</div>
+                    <p class="rev-text">"Heel prettig geholpen, ook voor de kids zijn ze erg geduldig. Fijn dat ik een bevestigingsmail kreeg inclusief kosten plaatje."</p>
+                    <div class="rev-author">
+                        <div class="rev-avatar">J</div>
+                        <div><div class="rev-name">J. van Dijk</div><div class="rev-src">Google Reviews</div></div>
                     </div>
                 </div>
-
-                <div class="faq-item reveal">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>Vanaf welke leeftijd kunnen kinderen komen?</h3>
-                        <div class="faq-toggle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">Kinderen kunnen al op de leeftijd van 1,5 jaar kennis maken met de stoel. Wij werken met de Gewoon Gaaf methode voor een veilige en leuke eerste kennismaking.</div>
-                    </div>
-                </div>
-
-                <div class="faq-item reveal">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>Hoe lang duurt het voor mijn prothese klaar is?</h3>
-                        <div class="faq-toggle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">Meestal tussen de 4 à 6 weken levertijd. U kunt dit het beste bespreken met onze technicus voor een exacte planning.</div>
+                <div class="rev-card">
+                    <div class="rev-stars">★ ★ ★ ★ ★</div>
+                    <p class="rev-text">"Fijne praktijk, zeer aardig personeel dat goed meedenkt. Kom al jaren bij deze tandarts en heb er zelfs een aardig reistijd voor over!"</p>
+                    <div class="rev-author">
+                        <div class="rev-avatar">K</div>
+                        <div><div class="rev-name">K. Jansen</div><div class="rev-src">Google Reviews</div></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact section" id="contact">
-        <div class="container">
+    <!-- FAQ -->
+    <section class="sec faq-bg" id="faq">
+        <div class="wrap">
+            <div class="faq-grid">
+                <div class="sec-header anim" style="margin-bottom:0">
+                    <div class="sec-tag">FAQ</div>
+                    <h2>Veelgestelde vragen</h2>
+                    <p>Alles wat u wilt weten over onze praktijk en behandelingen.</p>
+                </div>
+                <div class="faq-list anim">
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">
+                            <h3>Hoe kan ik een afspraak maken?</h3>
+                            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                        <div class="faq-a"><div class="faq-a-inner">U kunt een afspraak maken via e-mail (info@tandartsdenhaag.nl), telefonisch (070 322 8438) of aan de receptie.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">
+                            <h3>Wat is het spoednummer?</h3>
+                            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                        <div class="faq-a"><div class="faq-a-inner">Voor spoed belt u 070 – 204 00 10. Ons team staat klaar om u bij tandheelkundige noodgevallen zo snel mogelijk te helpen.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">
+                            <h3>Worden behandelingen vergoed?</h3>
+                            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                        <div class="faq-a"><div class="faq-a-inner">Dit verschilt per zorgverzekeraar en polis. Neem contact op met uw verzekeraar voor de juiste vergoeding. Wij werken met vaste NZa-tarieven.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">
+                            <h3>Kan ik mijn afspraak verzetten?</h3>
+                            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                        <div class="faq-a"><div class="faq-a-inner">Ja, afspraken dienen uiterlijk 48 uur van tevoren afgezegd te worden. Bij te late afzegging brengen wij een consult in rekening.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">
+                            <h3>Vanaf welke leeftijd welkom?</h3>
+                            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                        <div class="faq-a"><div class="faq-a-inner">Kinderen kunnen al op de leeftijd van 1,5 jaar kennis maken met de stoel. Wij werken met de Gewoon Gaaf methode.</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="sec" id="contact">
+        <div class="wrap">
+            <div class="sec-header anim">
+                <div class="sec-tag">Contact</div>
+                <h2>Neem contact op</h2>
+                <p>Heeft u een vraag of wilt u een afspraak maken? Wij staan voor u klaar.</p>
+            </div>
             <div class="contact-grid">
-                <div class="contact-left">
-                    <div class="section-label reveal">Contact</div>
-                    <h2 class="reveal">Neem contact met ons op</h2>
-                    <p class="section-description reveal">Heeft u een vraag of wilt u een afspraak maken? Wij staan graag voor u klaar.</p>
-
-                    <div class="contact-info-list">
-                        <div class="contact-info-item reveal">
-                            <div class="contact-info-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            </div>
-                            <div class="contact-info-text">
-                                <h4>Adres</h4>
-                                <p>Valkenbosplein 21<br>2563 CC Den Haag</p>
-                            </div>
+                <div class="anim-left">
+                    <div class="contact-block">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                         </div>
-
-                        <div class="contact-info-item reveal">
-                            <div class="contact-info-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            </div>
-                            <div class="contact-info-text">
-                                <h4>Telefoon</h4>
-                                <p><a href="tel:+31703228438">070 322 8438</a></p>
-                            </div>
+                        <div>
+                            <h4>Adres</h4>
+                            <p>Valkenbosplein 21<br>2563 CC Den Haag</p>
                         </div>
-
-                        <div class="contact-info-item reveal">
-                            <div class="contact-info-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                            </div>
-                            <div class="contact-info-text">
-                                <h4>E-mail</h4>
-                                <p><a href="mailto:info@tandartsdenhaag.nl">info@tandartsdenhaag.nl</a></p>
-                            </div>
+                    </div>
+                    <div class="contact-block">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.35a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.75.34 1.54.57 2.35.7A2 2 0 0 1 22 16.92z"/></svg>
                         </div>
-
-                        <div class="contact-info-item reveal" id="spoed">
-                            <div class="contact-info-icon" style="background: #fef2f2; color: #dc2626;">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                            </div>
-                            <div class="contact-info-text">
-                                <h4>Spoed</h4>
-                                <p>Spoednummer: <a href="tel:+31702040010">070 – 204 00 10</a></p>
-                            </div>
+                        <div>
+                            <h4>Telefoon</h4>
+                            <p><a href="tel:+31703228438">070 322 8438</a></p>
                         </div>
+                    </div>
+                    <div class="contact-block">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <h4>E-mail</h4>
+                            <p><a href="mailto:info@tandartsdenhaag.nl">info@tandartsdenhaag.nl</a></p>
+                        </div>
+                    </div>
+                    <div class="spoed-card">
+                        <h4>Spoedgevallen</h4>
+                        <p>Acute pijn of een gebroken tand? Bel direct <a href="tel:+31702040010">070 – 204 00 10</a></p>
                     </div>
                 </div>
-
-                <div class="contact-right">
-                    <div class="contact-hours-card reveal">
-                        <h3>Openingstijden</h3>
-                        <div class="hours-list">
-                            <div class="hours-item">
-                                <span class="hours-day">Maandag</span>
-                                <span class="hours-time">08:30 — 17:00</span>
-                            </div>
-                            <div class="hours-item">
-                                <span class="hours-day">Dinsdag</span>
-                                <span class="hours-time">08:30 — 17:00</span>
-                            </div>
-                            <div class="hours-item">
-                                <span class="hours-day">Woensdag</span>
-                                <span class="hours-time">08:30 — 17:00</span>
-                            </div>
-                            <div class="hours-item">
-                                <span class="hours-day">Donderdag</span>
-                                <span class="hours-time">08:30 — 17:00</span>
-                            </div>
-                            <div class="hours-item">
-                                <span class="hours-day">Vrijdag</span>
-                                <span class="hours-time">08:30 — 13:00</span>
-                            </div>
-                            <div class="hours-item">
-                                <span class="hours-day">Zaterdag</span>
-                                <span class="hours-time closed">Gesloten</span>
-                            </div>
-                            <div class="hours-item">
-                                <span class="hours-day">Zondag</span>
-                                <span class="hours-time closed">Gesloten</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-cta reveal">
-                        <h3>Direct een afspraak?</h3>
-                        <p>Bel ons of stuur een e-mail. Wij reageren dezelfde werkdag.</p>
-                        <a href="tel:+31703228438" class="btn btn-white">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            Bel 070 322 8438
-                        </a>
+                <div class="anim-right">
+                    <h3 style="font-family:var(--heading);font-size:1.3rem;font-weight:400;color:var(--navy);margin-bottom:24px;">Openingstijden</h3>
+                    <div class="hours-table">
+                        <div class="hours-row"><span class="hours-day">Maandag</span><span class="hours-val">08:30 — 17:00</span></div>
+                        <div class="hours-row"><span class="hours-day">Dinsdag</span><span class="hours-val">08:30 — 17:00</span></div>
+                        <div class="hours-row"><span class="hours-day">Woensdag</span><span class="hours-val">08:30 — 17:00</span></div>
+                        <div class="hours-row"><span class="hours-day">Donderdag</span><span class="hours-val">08:30 — 17:00</span></div>
+                        <div class="hours-row"><span class="hours-day">Vrijdag</span><span class="hours-val">08:30 — 13:00</span></div>
+                        <div class="hours-row"><span class="hours-day">Zaterdag</span><span class="hours-val off">Gesloten</span></div>
+                        <div class="hours-row"><span class="hours-day">Zondag</span><span class="hours-val off">Gesloten</span></div>
                     </div>
                 </div>
             </div>
@@ -2159,252 +1209,80 @@
     </section>
 
     <!-- Map -->
-    <div class="map-section">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2460.8!2d4.2957!3d52.0753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b7a3e3e3e3e3%3A0x0!2sValkenbosplein+21%2C+2563+CC+Den+Haag!5e0!3m2!1snl!2snl!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Valkenbosplein 21, Den Haag"></iframe>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2461!2d4.2957!3d52.0753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b7a3e3e3e3e3%3A0x0!2sValkenbosplein+21%2C+2563+CC+Den+Haag!5e0!3m2!1snl!2snl!4v1" allowfullscreen="" loading="lazy" title="Tandarts Den Haag"></iframe>
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-inner">
-                <div class="footer-logo">Tandarts Den Haag</div>
-                <div class="footer-links">
+    <footer class="foot">
+        <div class="wrap">
+            <div class="foot-inner">
+                <div class="foot-logo">Tandarts <span>Den Haag</span></div>
+                <div class="foot-links">
                     <a href="#home">Home</a>
                     <a href="#over-ons">Over ons</a>
                     <a href="#behandelingen">Behandelingen</a>
-                    <a href="#kinderen">Kinderen</a>
                     <a href="#contact">Contact</a>
                     <a href="#">Privacy</a>
                 </div>
-                <div class="footer-copy">
-                    &copy; 2026 Tandarts Den Haag &middot; Valkenbosplein 21, Den Haag
-                </div>
+                <div class="foot-copy">&copy; 2026 Tandarts Den Haag &middot; Valkenbosplein 21, Den Haag</div>
             </div>
         </div>
     </footer>
 
-    <!-- Sircle Banner -->
-    <div class="sircle-banner">
-        <div class="container">
-            <div class="sircle-banner-inner">
-                <p>Dit is een conceptontwerp door <a href="https://sirclecreative.com" target="_blank">Sircle Creative</a> — uw partner voor strategie, design & digitale groei.</p>
-            </div>
-        </div>
+    <!-- Sircle strip -->
+    <div class="sircle-strip">
+        Conceptontwerp door <a href="https://sirclecreative.com" target="_blank">Sircle Creative</a> — strategie, design & digitale groei
     </div>
 
-</div><!-- .site-wrapper -->
-
-    <!-- GSAP + ScrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
     <script>
-        // Page Loader
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('pageLoader').classList.add('loaded');
-            }, 800);
-        });
-
-        // Mobile Menu
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileToggle = document.getElementById('mobileToggle');
-        const mobileLinks = document.querySelectorAll('.mobile-menu-link');
-        const mobileBottom = document.querySelector('.mobile-menu-bottom');
-        let menuOpen = false;
-        let menuTimeline = null;
-
-        function openMobileMenu() {
-            menuOpen = true;
-            mobileToggle.classList.add('active');
-            mobileMenu.classList.add('active');
-            document.body.style.overflow = 'hidden';
-
-            if (menuTimeline) menuTimeline.kill();
-            menuTimeline = gsap.timeline();
-            gsap.set(mobileMenu, { visibility: 'visible', opacity: 1 });
-            gsap.set(mobileLinks, { opacity: 0, y: 30 });
-            gsap.set(mobileBottom, { opacity: 0, y: 20 });
-
-            menuTimeline
-                .to(mobileLinks, { opacity: 1, y: 0, duration: 0.5, stagger: 0.07, ease: 'power3.out' }, 0.1)
-                .to(mobileBottom, { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 0.35);
-        }
-
-        function closeMobileMenu() {
-            if (!menuOpen) return;
-            menuOpen = false;
-            mobileToggle.classList.remove('active');
-
-            if (menuTimeline) menuTimeline.kill();
-            menuTimeline = gsap.timeline({
-                onComplete: () => {
-                    mobileMenu.classList.remove('active');
-                    gsap.set(mobileMenu, { visibility: 'hidden', opacity: 0 });
-                    document.body.style.overflow = '';
-                }
-            });
-
-            menuTimeline
-                .to(mobileBottom, { opacity: 0, y: 10, duration: 0.25, ease: 'power2.in' })
-                .to(mobileLinks, { opacity: 0, y: -20, duration: 0.3, stagger: 0.04, ease: 'power2.in' }, 0)
-                .to(mobileMenu, { opacity: 0, duration: 0.25, ease: 'power2.in' }, 0.15);
-        }
-
-        function toggleMobileMenu() { menuOpen ? closeMobileMenu() : openMobileMenu(); }
-        mobileLinks.forEach(link => link.addEventListener('click', () => closeMobileMenu()));
-        document.querySelector('.mobile-menu-cta')?.addEventListener('click', () => closeMobileMenu());
-
-        // Navigation scroll
-        const nav = document.getElementById('mainNav');
+        // Scroll nav
+        const tb = document.getElementById('topbar');
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 50) nav.classList.add('scrolled');
-            else nav.classList.remove('scrolled');
+            tb.classList.toggle('stuck', window.scrollY > 60);
         }, { passive: true });
 
-        // GSAP Animations
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Hero
-        gsap.set('.hero-anim', { opacity: 0, y: 20 });
-        gsap.set('.hero-anim-right', { opacity: 0, x: 60 });
-        gsap.set('.hero-floating-card', { opacity: 0, y: 20, scale: 0.9 });
-        gsap.set('.hero-floating-card-2', { opacity: 0, y: -20, scale: 0.9 });
-
-        const heroTl = gsap.timeline({ delay: 1 });
-        heroTl
-            .to('.hero-badge', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' })
-            .to('.hero h1', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.3')
-            .to('.hero-text', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4')
-            .to('.hero-actions', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.3')
-            .to('.hero-stats', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.2')
-            .to('.hero-visual', { opacity: 1, x: 0, duration: 1, ease: 'power3.out' }, '-=0.8')
-            .to('.hero-floating-card', { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'back.out(1.7)' }, '-=0.3')
-            .to('.hero-floating-card-2', { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'back.out(1.7)' }, '-=0.4');
-
-        // Scroll reveals
-        document.querySelectorAll('.reveal').forEach(el => {
-            gsap.to(el, {
-                scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
-                opacity: 1, y: 0, duration: 0.8, ease: 'power3.out'
-            });
-        });
-
-        document.querySelectorAll('.reveal-left').forEach(el => {
-            gsap.to(el, {
-                scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
-                opacity: 1, x: 0, duration: 0.8, ease: 'power3.out'
-            });
-        });
-
-        document.querySelectorAll('.reveal-right').forEach(el => {
-            if (el.closest('.hero')) return;
-            gsap.to(el, {
-                scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
-                opacity: 1, x: 0, duration: 0.8, ease: 'power3.out'
-            });
-        });
-
-        // Stagger cards
-        gsap.utils.toArray('.service-card').forEach((card, i) => {
-            gsap.to(card, {
-                scrollTrigger: { trigger: card, start: 'top 85%', toggleActions: 'play none none none' },
-                opacity: 1, y: 0, duration: 0.7, delay: i * 0.08, ease: 'power3.out'
-            });
-        });
-
-        gsap.utils.toArray('.review-card').forEach((card, i) => {
-            gsap.to(card, {
-                scrollTrigger: { trigger: card, start: 'top 85%', toggleActions: 'play none none none' },
-                opacity: 1, y: 0, duration: 0.7, delay: i * 0.08, ease: 'power3.out'
-            });
-        });
-
-        gsap.utils.toArray('.why-card').forEach((card, i) => {
-            gsap.to(card, {
-                scrollTrigger: { trigger: card, start: 'top 85%', toggleActions: 'play none none none' },
-                opacity: 1, y: 0, duration: 0.7, delay: i * 0.08, ease: 'power3.out'
-            });
-        });
-
-        // Parallax
-        gsap.to('.hero-shape-1', {
-            scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 },
-            y: -100, ease: 'none'
-        });
-
-        gsap.to('.hero-shape-2', {
-            scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 },
-            y: -60, ease: 'none'
-        });
-
-        // Counter animation
-        function animateCounter(element, target, suffix = '') {
-            const isDecimal = target % 1 !== 0;
-            gsap.to({ val: 0 }, {
-                val: target, duration: 2, ease: 'power2.out',
-                onUpdate: function() {
-                    const current = this.targets()[0].val;
-                    element.textContent = isDecimal ? current.toFixed(1) + suffix : Math.floor(current).toLocaleString('nl-NL') + suffix;
-                }
-            });
+        // Mobile menu
+        function toggleMob() {
+            document.getElementById('burger').classList.toggle('open');
+            document.getElementById('mobileNav').classList.toggle('open');
+            document.body.style.overflow = document.getElementById('mobileNav').classList.contains('open') ? 'hidden' : '';
+        }
+        function closeMob() {
+            document.getElementById('burger').classList.remove('open');
+            document.getElementById('mobileNav').classList.remove('open');
+            document.body.style.overflow = '';
         }
 
-        setTimeout(() => {
-            const stats = document.querySelectorAll('.hero-stat-number');
-            if (stats[0]) animateCounter(stats[0], 6, '');
-            if (stats[1]) animateCounter(stats[1], 4.8, '');
-            if (stats[2]) animateCounter(stats[2], 1.5, '');
-        }, 1200);
-
-        ScrollTrigger.create({
-            trigger: '.why-bottom', start: 'top 85%', once: true,
-            onEnter: () => {
-                const ws = document.querySelectorAll('.why-stat-number');
-                if (ws[0]) animateCounter(ws[0], 6, '');
-                if (ws[1]) animateCounter(ws[1], 4.8, '');
-                if (ws[2]) animateCounter(ws[2], 5, '');
-                if (ws[3]) animateCounter(ws[3], 1.5, '');
-            }
-        });
-
-        // Smooth anchor
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-            });
-        });
-
-        // Active nav
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-links a:not(.btn)');
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => { if (window.pageYOffset >= section.offsetTop - 120) current = section.getAttribute('id'); });
-            navLinks.forEach(link => {
-                link.style.color = '';
-                if (link.getAttribute('href') === '#' + current) link.style.color = 'var(--color-primary)';
-            });
-        }, { passive: true });
-
-        // FAQ Toggle
+        // FAQ
         function toggleFaq(el) {
             const item = el.closest('.faq-item');
-            const answer = item.querySelector('.faq-answer');
-            const isActive = item.classList.contains('active');
-
-            // Close all
-            document.querySelectorAll('.faq-item.active').forEach(faq => {
-                faq.classList.remove('active');
-                faq.querySelector('.faq-answer').style.maxHeight = '0';
+            const ans = item.querySelector('.faq-a');
+            const wasOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(i => {
+                i.classList.remove('open');
+                i.querySelector('.faq-a').style.maxHeight = '0';
             });
-
-            if (!isActive) {
-                item.classList.add('active');
-                answer.style.maxHeight = answer.scrollHeight + 'px';
+            if (!wasOpen) {
+                item.classList.add('open');
+                ans.style.maxHeight = ans.scrollHeight + 'px';
             }
         }
+
+        // Scroll reveal
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); } });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.anim, .anim-left, .anim-right').forEach(el => obs.observe(el));
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
+                const t = document.querySelector(this.getAttribute('href'));
+                if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+            });
+        });
     </script>
 </body>
 </html>
